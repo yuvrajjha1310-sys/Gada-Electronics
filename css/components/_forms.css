@@ -1,0 +1,221 @@
+/* ==========================================================================
+   Gada Electronics — Form Elements
+   ========================================================================== */
+
+.form-group {
+  margin-bottom: var(--space-5);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-5);
+}
+
+@media (min-width: 640px) {
+  .form-row--2 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.form-label {
+  display: block;
+  font-size: var(--fs-body-sm);
+  font-weight: var(--fw-medium);
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-2);
+}
+
+.form-label .required {
+  color: var(--color-error);
+  margin-left: var(--space-1);
+}
+
+.form-control {
+  width: 100%;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 0.875rem 1rem;
+  font-size: var(--fs-body);
+  color: var(--color-text-primary);
+  background-color: var(--color-white);
+  transition: border-color var(--duration-fast) var(--ease-standard),
+              box-shadow var(--duration-fast) var(--ease-standard);
+}
+
+.form-control::placeholder {
+  color: var(--color-steel-400);
+}
+
+.form-control:focus-visible {
+  outline: none;
+  border-color: var(--color-primary-500);
+  box-shadow: 0 0 0 3px var(--color-primary-100);
+}
+
+textarea.form-control {
+  min-height: 140px;
+  resize: vertical;
+}
+
+select.form-control {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%234B545F' d='M1 1l5 5 5-5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  padding-right: 2.5rem;
+}
+
+.form-control.has-error {
+  border-color: var(--color-error);
+}
+
+.form-control.has-error:focus-visible {
+  box-shadow: 0 0 0 3px rgba(214, 69, 69, 0.15);
+}
+
+.form-error-message {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  margin-top: var(--space-2);
+  font-size: var(--fs-caption);
+  color: var(--color-error);
+}
+
+.form-hint {
+  margin-top: var(--space-2);
+  font-size: var(--fs-caption);
+  color: var(--color-text-secondary);
+}
+
+/* ---------- Checkbox / Radio ---------- */
+.form-check {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+}
+
+.form-check input[type="checkbox"],
+.form-check input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  accent-color: var(--color-primary-500);
+  flex-shrink: 0;
+}
+
+.form-check label {
+  font-size: var(--fs-body-sm);
+  color: var(--color-text-secondary);
+}
+
+/* ---------- File Dropzone ---------- */
+.file-dropzone {
+  border: 2px dashed var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-8) var(--space-5);
+  text-align: center;
+  cursor: pointer;
+  transition: border-color var(--duration-fast) var(--ease-standard),
+              background-color var(--duration-fast) var(--ease-standard);
+}
+
+.file-dropzone:hover,
+.file-dropzone.is-dragover {
+  border-color: var(--color-primary-500);
+  background-color: var(--color-primary-100);
+}
+
+.file-dropzone__icon {
+  font-size: 2rem;
+  color: var(--color-primary-400);
+  margin-bottom: var(--space-3);
+}
+
+.file-dropzone__text {
+  font-size: var(--fs-body-sm);
+  color: var(--color-text-secondary);
+}
+
+.file-dropzone__text strong {
+  color: var(--color-primary-500);
+}
+
+.file-dropzone__hint {
+  font-size: var(--fs-caption);
+  color: var(--color-steel-400);
+  margin-top: var(--space-2);
+}
+
+.file-dropzone__input {
+  display: none;
+}
+
+.file-preview {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+  padding: var(--space-3) var(--space-4);
+  background-color: var(--color-bg-alt);
+  border-radius: var(--radius-md);
+  font-size: var(--fs-body-sm);
+}
+
+.file-preview__info {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-width: 0;
+}
+
+.file-preview__name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.file-preview__remove {
+  color: var(--color-error);
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+/* ---------- Search Input (live search) ---------- */
+.search-input {
+  position: relative;
+}
+
+.search-input .form-control {
+  padding-left: 2.75rem;
+}
+
+.search-input__icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-steel-400);
+  pointer-events: none;
+}
+
+.search-input__clear {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-steel-400);
+  display: none;
+}
+
+.search-input.has-value .search-input__clear {
+  display: block;
+}
+
+/* ---------- Range Slider (price filter) ---------- */
+.form-range {
+  width: 100%;
+  accent-color: var(--color-primary-500);
+}

@@ -1,0 +1,97 @@
+/* ==========================================================================
+   Gada Electronics — Accordion (used for Product Specs, FAQ, Job details)
+   ========================================================================== */
+
+.accordion {
+  border-top: 1px solid var(--color-border);
+}
+
+.accordion__item {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.accordion__trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: var(--space-4);
+  padding: var(--space-5) var(--space-2);
+  text-align: left;
+  font-size: var(--fs-body);
+  font-weight: var(--fw-medium);
+  color: var(--color-text-primary);
+}
+
+.accordion__trigger:hover {
+  color: var(--color-primary-500);
+}
+
+.accordion__icon {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-bg-alt);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  color: var(--color-primary-500);
+  transition: transform var(--duration-base) var(--ease-standard),
+              background-color var(--duration-base) var(--ease-standard);
+}
+
+.accordion__item.is-open .accordion__icon {
+  transform: rotate(45deg);
+  background-color: var(--color-accent-500);
+  color: var(--color-primary-900);
+}
+
+.accordion__panel {
+  height: 0;
+  overflow: hidden;
+  transition: height var(--duration-base) var(--ease-standard);
+}
+
+.accordion__panel-inner {
+  padding: 0 var(--space-2) var(--space-5);
+  font-size: var(--fs-body-sm);
+  color: var(--color-text-secondary);
+  line-height: var(--lh-body);
+}
+
+/* ---------- Specification table variant (product details) ---------- */
+.spec-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.spec-table tr {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.spec-table tr:last-child {
+  border-bottom: none;
+}
+
+.spec-table th,
+.spec-table td {
+  text-align: left;
+  padding: var(--space-3) var(--space-2);
+  font-size: var(--fs-body-sm);
+}
+
+.spec-table th {
+  width: 40%;
+  font-weight: var(--fw-medium);
+  color: var(--color-text-secondary);
+}
+
+.spec-table td {
+  color: var(--color-text-primary);
+}
+
+.spec-table tr:nth-child(even) {
+  background-color: var(--color-bg-alt);
+}

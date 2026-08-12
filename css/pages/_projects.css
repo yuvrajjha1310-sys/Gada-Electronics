@@ -1,0 +1,104 @@
+/* ==========================================================================
+   Gada Electronics — Projects & Installations Listing Page
+   ========================================================================== */
+
+.projects-filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-8);
+}
+
+.projects-filter-bar__btn {
+  padding: var(--space-2) var(--space-5);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  font-size: var(--fs-body-sm);
+  font-weight: var(--fw-medium);
+  color: var(--color-text-secondary);
+  transition: background-color var(--duration-fast) var(--ease-standard),
+              color var(--duration-fast) var(--ease-standard),
+              border-color var(--duration-fast) var(--ease-standard);
+}
+
+.projects-filter-bar__btn:hover {
+  border-color: var(--color-primary-500);
+  color: var(--color-primary-500);
+}
+
+.projects-filter-bar__btn.is-active {
+  background-color: var(--color-primary-900);
+  border-color: var(--color-primary-900);
+  color: var(--color-white);
+}
+
+/* ---------- Projects Grid ---------- */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: var(--space-6);
+}
+
+@media (min-width: 640px) {
+  .projects-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 1024px) {
+  .projects-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+.project-card__media {
+  aspect-ratio: 16 / 10;
+  position: relative;
+}
+
+.project-card__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 40%, rgba(10, 22, 40, 0.85) 100%);
+  opacity: 0;
+  transition: opacity var(--duration-base) var(--ease-standard);
+}
+
+.card:hover .project-card__overlay {
+  opacity: 1;
+}
+
+.project-card__view {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.85);
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: var(--color-accent-500);
+  color: var(--color-primary-900);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  opacity: 0;
+  transition: opacity var(--duration-base) var(--ease-standard),
+              transform var(--duration-base) var(--ease-standard);
+  z-index: 2;
+}
+
+.card:hover .project-card__view {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.project-card__location {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--fs-caption);
+  color: var(--color-text-secondary);
+  margin-top: var(--space-2);
+}
+
+.project-card__location .icon {
+  color: var(--color-primary-400);
+}

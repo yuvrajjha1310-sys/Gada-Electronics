@@ -1,0 +1,141 @@
+/* ==========================================================================
+   Gada Electronics — Project Details Page
+   ========================================================================== */
+
+.project-hero {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  aspect-ratio: 21 / 9;
+  margin-bottom: var(--space-8);
+}
+
+.project-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-details-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-9);
+}
+
+@media (min-width: 1024px) {
+  .project-details-layout {
+    grid-template-columns: 1fr 340px;
+  }
+}
+
+.project-details__content .u-prose {
+  max-width: none;
+}
+
+.project-scope-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: var(--space-5);
+}
+
+.project-scope-list__item {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  background-color: var(--color-bg-alt);
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-full);
+  font-size: var(--fs-body-sm);
+}
+
+.project-scope-list__item .icon {
+  color: var(--color-primary-500);
+}
+
+/* ---------- Sidebar Info Card ---------- */
+.project-info-card {
+  background-color: var(--color-bg-alt);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  position: sticky;
+  top: calc(var(--space-8) + 64px);
+}
+
+.project-info-card__row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding-block: var(--space-3);
+  border-bottom: 1px solid var(--color-border);
+  font-size: var(--fs-body-sm);
+}
+
+.project-info-card__row:last-child {
+  border-bottom: none;
+}
+
+.project-info-card__label {
+  color: var(--color-text-secondary);
+}
+
+.project-info-card__value {
+  font-weight: var(--fw-medium);
+  text-align: right;
+}
+
+/* ---------- Gallery Grid (masonry-esque) ---------- */
+.project-gallery-grid {
+  margin-top: var(--space-10);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4);
+}
+
+@media (min-width: 768px) {
+  .project-gallery-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+.project-gallery-grid__item {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  cursor: zoom-in;
+  position: relative;
+}
+
+.project-gallery-grid__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--duration-base) var(--ease-standard);
+}
+
+.project-gallery-grid__item:hover img {
+  transform: scale(1.06);
+}
+
+.project-gallery-grid__item::after {
+  content: "\f00e";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-white);
+  font-size: 1.25rem;
+  background-color: rgba(10, 22, 40, 0.35);
+  opacity: 0;
+  transition: opacity var(--duration-fast) var(--ease-standard);
+}
+
+.project-gallery-grid__item:hover::after {
+  opacity: 1;
+}
+
+/* ---------- Related Projects ---------- */
+.related-projects {
+  margin-top: var(--space-11);
+}

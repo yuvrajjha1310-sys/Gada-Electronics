@@ -1,0 +1,74 @@
+/* ==========================================================================
+   Gada Electronics — Animated Statistics Counters
+   ========================================================================== */
+
+.stat {
+  text-align: center;
+  background-color: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6) var(--space-4);
+  box-shadow: var(--shadow-md, 0 8px 24px rgba(10, 22, 40, 0.12));
+  transition: transform var(--duration-base) var(--ease-standard),
+              box-shadow var(--duration-base) var(--ease-standard);
+}
+
+.stat:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-hover, 0 16px 32px rgba(10, 22, 40, 0.18));
+}
+
+.stat__number {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 2px;
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: var(--fw-bold);
+  color: var(--color-accent-500);
+  line-height: 1;
+}
+
+.stat__suffix {
+  font-size: 0.55em;
+  font-weight: var(--fw-semibold);
+}
+
+.stat__label {
+  display: block;
+  margin-top: var(--space-3);
+  font-size: var(--fs-body-sm);
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* ---------- Stats Band (section wrapper) ---------- */
+.stats-band,
+.stat-band {
+  background-color: var(--color-primary-900);
+  padding-block: var(--space-9);
+}
+
+.stats-band .l-grid,
+.stat-band .stat-grid {
+  gap: var(--space-5);
+}
+
+@media (min-width: 768px) {
+  .stats-band .l-grid,
+  .stat-band .stat-grid {
+    gap: var(--space-6);
+  }
+}
+
+.stat--bordered {
+  border-left: 1px solid rgba(255, 255, 255, 0.12);
+  padding-left: var(--space-6);
+}
+
+@media (max-width: 767px) {
+  .stat--bordered {
+    border-left: none;
+    padding-left: 0;
+  }
+}

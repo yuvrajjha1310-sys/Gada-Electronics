@@ -1,0 +1,88 @@
+/* ==========================================================================
+   Gada Electronics — Site Header (wrapper around navbar + top utility bar)
+   ========================================================================== */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: var(--z-sticky);
+  background-color: transparent;
+  transition: background-color var(--duration-base) var(--ease-standard),
+              box-shadow var(--duration-base) var(--ease-standard);
+}
+
+.site-header.is-scrolled {
+  background-color: var(--color-white);
+  box-shadow: var(--shadow-sm);
+}
+
+.site-header.is-scrolled .navbar__link,
+.site-header.is-scrolled .navbar__logo-text {
+  color: var(--color-text-primary);
+}
+
+/* Transparent-on-hero variant: only applied on templates with a dark hero directly under header */
+.site-header--transparent:not(.is-scrolled) .navbar__link {
+  color: var(--color-text-inverse);
+}
+
+.site-header--transparent:not(.is-scrolled) .navbar__logo-text {
+  color: var(--color-text-inverse);
+}
+
+/* ---------- Topbar (utility strip above navbar) ---------- */
+.topbar {
+  background-color: var(--color-primary-900);
+  color: var(--color-steel-300);
+  font-size: var(--fs-caption);
+}
+
+.topbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: var(--space-2);
+  gap: var(--space-4);
+}
+
+.topbar__contacts {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+}
+
+.topbar__contacts a {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--color-steel-300);
+  transition: color var(--duration-fast) var(--ease-standard);
+}
+
+.topbar__contacts a:hover {
+  color: var(--color-accent-400);
+}
+
+.topbar__social {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.topbar__social a {
+  color: var(--color-steel-300);
+  font-size: var(--fs-body-sm);
+  transition: color var(--duration-fast) var(--ease-standard);
+}
+
+.topbar__social a:hover {
+  color: var(--color-accent-400);
+}
+
+@media (max-width: 767px) {
+  .topbar__social {
+    display: none;
+  }
+}

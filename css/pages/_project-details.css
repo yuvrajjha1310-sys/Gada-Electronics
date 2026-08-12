@@ -1,0 +1,237 @@
+/* ==========================================================================
+   Gada Electronics — Product Details Page
+   ========================================================================== */
+
+.product-details {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-9);
+}
+
+@media (min-width: 1024px) {
+  .product-details {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ---------- Gallery ---------- */
+.product-gallery__main {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background-color: var(--color-bg-alt);
+  margin-bottom: var(--space-4);
+}
+
+.product-gallery__main .swiper-slide {
+  aspect-ratio: 1 / 1;
+  cursor: zoom-in;
+}
+
+.product-gallery__main img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-gallery__thumbs {
+  padding: 2px;
+}
+
+.product-gallery__thumbs .swiper-slide {
+  aspect-ratio: 1 / 1;
+  width: 80px;
+}
+
+/* ---------- Info Panel ---------- */
+.product-info__brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+
+.product-info__brand img {
+  height: 24px;
+  width: auto;
+}
+
+.product-info__title {
+  font-size: var(--fs-h2);
+}
+
+.product-info__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-4);
+  margin-top: var(--space-3);
+  font-size: var(--fs-body-sm);
+  color: var(--color-text-secondary);
+}
+
+.product-info__meta-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.product-info__rating {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--color-accent-500);
+}
+
+.product-info__price {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-3);
+  margin-top: var(--space-6);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--color-border);
+}
+
+.product-info__price-current {
+  font-family: var(--font-heading);
+  font-size: var(--fs-h2);
+  font-weight: var(--fw-bold);
+  color: var(--color-primary-900);
+}
+
+.product-info__price-original {
+  font-size: var(--fs-body-lg);
+  color: var(--color-steel-400);
+  text-decoration: line-through;
+}
+
+.product-info__price-save {
+  font-size: var(--fs-caption);
+  color: var(--color-success);
+  font-weight: var(--fw-semibold);
+}
+
+.product-info__short-desc {
+  margin-top: var(--space-5);
+  color: var(--color-text-secondary);
+  line-height: var(--lh-body);
+}
+
+.product-info__qty {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  width: fit-content;
+}
+
+.product-info__qty button {
+  width: 44px;
+  height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-primary);
+  transition: background-color var(--duration-fast) var(--ease-standard);
+}
+
+.product-info__qty button:hover {
+  background-color: var(--color-bg-alt);
+}
+
+.product-info__qty input {
+  width: 52px;
+  height: 48px;
+  text-align: center;
+  border: none;
+  border-left: 1px solid var(--color-border);
+  border-right: 1px solid var(--color-border);
+  font-weight: var(--fw-semibold);
+}
+
+.product-info__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-4);
+  margin-top: var(--space-6);
+}
+
+.product-info__trust {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+  margin-top: var(--space-8);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--color-border);
+}
+
+.product-info__trust-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-2);
+  font-size: var(--fs-caption);
+  color: var(--color-text-secondary);
+}
+
+.product-info__trust-item .icon {
+  font-size: 1.375rem;
+  color: var(--color-primary-500);
+}
+
+/* ---------- Tabs Section (Description / Specs / Reviews) ---------- */
+.product-tabs-section {
+  margin-top: var(--space-10);
+}
+
+.review-summary {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+  padding: var(--space-6);
+  background-color: var(--color-bg-alt);
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--space-6);
+}
+
+.review-summary__score {
+  text-align: center;
+  padding-right: var(--space-6);
+  border-right: 1px solid var(--color-border);
+}
+
+.review-summary__score-number {
+  font-family: var(--font-heading);
+  font-size: var(--fs-h1);
+  font-weight: var(--fw-bold);
+  color: var(--color-primary-900);
+}
+
+.review-item {
+  padding-block: var(--space-5);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.review-item__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-2);
+}
+
+.review-item__author {
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-body-sm);
+}
+
+.review-item__date {
+  font-size: var(--fs-caption);
+  color: var(--color-steel-400);
+}
+
+/* ---------- Related Products ---------- */
+.related-products {
+  margin-top: var(--space-11);
+}

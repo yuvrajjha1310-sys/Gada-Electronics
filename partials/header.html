@@ -1,0 +1,151 @@
+<!-- ==========================================================================
+     Gada Electronics — Site Header
+     Paste immediately after the opening <body> tag (after the skip link)
+     on every page. Add class "site-header--transparent" only on templates
+     with a dark hero directly beneath it (e.g. Home).
+     ========================================================================== -->
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- ---------- Topbar ---------- -->
+<div class="topbar">
+  <div class="l-container topbar__inner">
+    <div class="topbar__contacts">
+      <a href="tel:+912240001234">
+        <i class="fa-solid fa-phone icon"></i>
+        <span>+91-22-4000-1234</span>
+      </a>
+      <a href="mailto:info@gadaelectronics.com">
+        <i class="fa-solid fa-envelope icon"></i>
+        <span>info@gadaelectronics.com</span>
+      </a>
+      <span class="u-hidden-mobile">
+        <i class="fa-regular fa-clock icon"></i>
+        Mon - Sat: 9:00 AM - 6:30 PM
+      </span>
+    </div>
+    <div class="topbar__social">
+      <a href="https://facebook.com/gadaelectronics" aria-label="Facebook" target="_blank" rel="noopener">
+        <i class="fa-brands fa-facebook-f"></i>
+      </a>
+      <a href="https://linkedin.com/company/gadaelectronics" aria-label="LinkedIn" target="_blank" rel="noopener">
+        <i class="fa-brands fa-linkedin-in"></i>
+      </a>
+      <a href="https://twitter.com/gadaelectronics" aria-label="Twitter" target="_blank" rel="noopener">
+        <i class="fa-brands fa-x-twitter"></i>
+      </a>
+      <a href="https://instagram.com/gadaelectronics" aria-label="Instagram" target="_blank" rel="noopener">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ---------- Header / Navbar ---------- -->
+<header class="site-header" data-js="site-header">
+  <div class="l-container navbar">
+
+    <!-- Logo -->
+    <a href="index.html" class="navbar__logo" aria-label="Gada Electronics — Home">
+      <img src="assets/images/logo/logo-primary.svg" alt="Gada Electronics logo" width="36" height="36">
+      <span class="navbar__logo-text">Gada Electronics</span>
+    </a>
+
+    <!-- Primary Navigation -->
+    <nav class="navbar__nav" aria-label="Primary navigation">
+      <ul class="navbar__list" data-js="navbar-list">
+
+        <li class="navbar__item">
+          <a href="index.html" class="navbar__link is-active">Home</a>
+        </li>
+
+        <li class="navbar__item">
+          <a href="about.html" class="navbar__link">About Us</a>
+        </li>
+
+        <!-- Products — has Mega Menu -->
+        <li class="navbar__item" data-js="mega-menu-trigger">
+          <button class="navbar__link" aria-expanded="false" aria-haspopup="true">
+            Products <i class="fa-solid fa-chevron-down icon-chevron"></i>
+          </button>
+
+          <div class="mega-menu" role="menu">
+            <div class="mega-menu__grid">
+              <div class="mega-menu__col" role="none">
+                <p class="mega-menu__group-title">By Category</p>
+                <ul class="mega-menu__list">
+                  <li><a class="mega-menu__link" href="products.html?category=circuit-breakers"><i class="fa-solid fa-bolt icon"></i>Circuit Breakers</a></li>
+                  <li><a class="mega-menu__link" href="products.html?category=transformers"><i class="fa-solid fa-plug-circle-bolt icon"></i>Transformers</a></li>
+                  <li><a class="mega-menu__link" href="products.html?category=switchgear"><i class="fa-solid fa-toggle-on icon"></i>Switchgear</a></li>
+                  <li><a class="mega-menu__link" href="products.html?category=cables-wires"><i class="fa-solid fa-ethernet icon"></i>Cables &amp; Wires</a></li>
+                </ul>
+              </div>
+
+              <div class="mega-menu__col" role="none">
+                <p class="mega-menu__group-title">By Application</p>
+                <ul class="mega-menu__list">
+                  <li><a class="mega-menu__link" href="products.html?category=automation"><i class="fa-solid fa-microchip icon"></i>Automation &amp; Control</a></li>
+                  <li><a class="mega-menu__link" href="products.html?category=relays"><i class="fa-solid fa-satellite-dish icon"></i>Relays &amp; Protection</a></li>
+                  <li><a class="mega-menu__link" href="products.html?category=panels"><i class="fa-solid fa-server icon"></i>Distribution Panels</a></li>
+                  <li><a class="mega-menu__link" href="products.html?featured=true"><i class="fa-solid fa-star icon"></i>Featured Products</a></li>
+                </ul>
+              </div>
+
+              <div class="mega-menu__col" role="none">
+                <p class="mega-menu__group-title">Top Brands</p>
+                <ul class="mega-menu__list">
+                  <li><a class="mega-menu__link" href="brands.html?brand=siemens"><i class="fa-solid fa-industry icon"></i>Siemens</a></li>
+                  <li><a class="mega-menu__link" href="brands.html?brand=schneider-electric"><i class="fa-solid fa-industry icon"></i>Schneider Electric</a></li>
+                  <li><a class="mega-menu__link" href="brands.html?brand=abb"><i class="fa-solid fa-industry icon"></i>ABB</a></li>
+                  <li><a class="mega-menu__link" href="brands.html"><i class="fa-solid fa-arrow-right icon"></i>View All Brands</a></li>
+                </ul>
+              </div>
+
+              <div class="mega-menu__promo" role="none" style="background-image: url('assets/images/products/placeholders/mega-menu-promo.jpg');">
+                <div class="mega-menu__promo-content">
+                  <span class="mega-menu__promo-eyebrow">New Arrival</span>
+                  <p class="mega-menu__promo-title">Smart Distribution Panels</p>
+                </div>
+                <a href="products.html?category=panels" class="mega-menu__promo-link">
+                  Explore Range <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="navbar__item">
+          <a href="industries.html" class="navbar__link">Industries</a>
+        </li>
+
+        <li class="navbar__item">
+          <a href="services.html" class="navbar__link">Services</a>
+        </li>
+
+        <li class="navbar__item">
+          <a href="projects.html" class="navbar__link">Projects</a>
+        </li>
+
+        <li class="navbar__item">
+          <a href="careers.html" class="navbar__link">Careers</a>
+        </li>
+
+        <li class="navbar__item">
+          <a href="contact.html" class="navbar__link">Contact</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Actions -->
+    <div class="navbar__actions">
+      <a href="contact.html" class="btn btn--primary navbar__cta">
+        Get a Quote
+      </a>
+
+      <button class="navbar__toggle" data-js="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+
+  </div>
+</header>

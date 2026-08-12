@@ -1,0 +1,311 @@
+/* ==========================================================================
+   Gada Electronics — Products Listing Page
+   ========================================================================== */
+
+.products-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-8);
+  align-items: start;
+}
+
+@media (min-width: 1024px) {
+  .products-layout {
+    grid-template-columns: 280px 1fr;
+  }
+}
+
+/* ---------- Sidebar Filters ---------- */
+.filters-sidebar {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  position: sticky;
+  top: calc(var(--space-8) + 64px);
+  max-height: calc(100svh - (var(--space-8) + 64px) - var(--space-6));
+  overflow-y: auto;
+}
+
+.filters-sidebar__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-5);
+}
+
+.filters-sidebar__clear {
+  font-size: var(--fs-caption);
+  color: var(--color-primary-500);
+  font-weight: var(--fw-medium);
+}
+
+.filter-group {
+  padding-block: var(--space-5);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.filter-group:last-child {
+  border-bottom: none;
+}
+
+.filter-group__title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: var(--fs-body-sm);
+  font-weight: var(--fw-semibold);
+  margin-bottom: var(--space-4);
+}
+
+.filter-group__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  max-height: 220px;
+  overflow-y: auto;
+}
+
+.filter-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+}
+
+.filter-option label {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: var(--fs-body-sm);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+}
+
+.filter-option__count {
+  font-size: var(--fs-caption);
+  color: var(--color-steel-400);
+}
+
+.filter-price__inputs {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.filter-price__inputs .form-control {
+  padding: var(--space-2) var(--space-3);
+  font-size: var(--fs-body-sm);
+}
+
+/* ---------- Toolbar (search / sort / view toggle) ---------- */
+.products-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.products-toolbar__left {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  flex: 1;
+  min-width: 240px;
+}
+
+.products-toolbar__count {
+  font-size: var(--fs-body-sm);
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+}
+
+.products-toolbar__right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.view-toggle {
+  display: flex;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.view-toggle__btn {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-secondary);
+  transition: background-color var(--duration-fast) var(--ease-standard),
+              color var(--duration-fast) var(--ease-standard);
+}
+
+.view-toggle__btn.is-active {
+  background-color: var(--color-primary-900);
+  color: var(--color-white);
+}
+
+/* ---------- Active Filter Chips ---------- */
+.active-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-6);
+}
+
+.filter-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  background-color: var(--color-primary-100);
+  color: var(--color-primary-700);
+  font-size: var(--fs-caption);
+  font-weight: var(--fw-medium);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-full);
+}
+
+.filter-chip button {
+  color: var(--color-primary-700);
+  font-size: 0.7rem;
+}
+
+/* ---------- Product Grid ---------- */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: var(--space-6);
+}
+
+@media (min-width: 640px) {
+  .products-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 1280px) {
+  .products-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+.products-grid.is-list-view {
+  grid-template-columns: 1fr;
+}
+
+.products-grid.is-list-view .product-card {
+  flex-direction: row;
+}
+
+.products-grid.is-list-view .product-card .card__media {
+  width: 240px;
+  aspect-ratio: 1 / 1;
+  flex-shrink: 0;
+}
+
+/* ---------- Product Card ---------- */
+.product-card__price {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+}
+
+.product-card__price-current {
+  font-size: var(--fs-h5);
+  font-weight: var(--fw-bold);
+  color: var(--color-primary-900);
+}
+
+.product-card__price-original {
+  font-size: var(--fs-body-sm);
+  color: var(--color-steel-400);
+  text-decoration: line-through;
+}
+
+.product-card__rating {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  color: var(--color-accent-500);
+  font-size: 0.75rem;
+}
+
+.product-card__brand {
+  font-size: var(--fs-caption);
+  color: var(--color-text-secondary);
+}
+
+.product-card__quick-actions {
+  position: absolute;
+  top: var(--space-3);
+  right: var(--space-3);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  opacity: 0;
+  transform: translateX(8px);
+  transition: opacity var(--duration-base) var(--ease-standard),
+              transform var(--duration-base) var(--ease-standard);
+}
+
+.card:hover .product-card__quick-actions {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.product-card__quick-actions button {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: var(--color-white);
+  color: var(--color-primary-900);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-sm);
+  font-size: 0.85rem;
+}
+
+.product-card__quick-actions button:hover {
+  background-color: var(--color-accent-500);
+}
+
+/* ---------- No Results ---------- */
+.no-results {
+  text-align: center;
+  padding-block: var(--space-11);
+}
+
+.no-results__icon {
+  font-size: 3rem;
+  color: var(--color-steel-300);
+  margin-bottom: var(--space-5);
+}
+
+/* ==========================================================================
+   PRODUCT CARD VISIBILITY FIX
+   Product cards use AOS attributes in products.html. AOS normally keeps
+   them at opacity: 0 until the animation is triggered. The product grid
+   is already rendered in HTML, so cards must remain visible.
+   ========================================================================== */
+
+.products-grid .product-card[data-aos] {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+}
+
+.products-grid .product-card[data-aos].aos-init,
+.products-grid .product-card[data-aos].aos-animate {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+}
+
+.products-grid .product-card[hidden] {
+  display: none !important;
+}

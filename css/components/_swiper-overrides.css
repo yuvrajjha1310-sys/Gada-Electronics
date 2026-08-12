@@ -1,0 +1,105 @@
+/* ==========================================================================
+   Gada Electronics — Swiper.js Theme Overrides
+   Loaded AFTER css/vendor/swiper-bundle.min.css so these rules win.
+   ========================================================================== */
+
+.swiper {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* ---------- Pagination Bullets ---------- */
+.swiper-pagination-bullet {
+  width: 9px;
+  height: 9px;
+  background-color: var(--color-steel-300);
+  opacity: 1;
+  transition: background-color var(--duration-fast) var(--ease-standard),
+              width var(--duration-fast) var(--ease-standard);
+  border-radius: var(--radius-full);
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--color-accent-500);
+  width: 24px;
+}
+
+.section--dark .swiper-pagination-bullet {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.section--dark .swiper-pagination-bullet-active {
+  background-color: var(--color-accent-500);
+}
+
+/* ---------- Navigation Arrows ---------- */
+.swiper-button-prev,
+.swiper-button-next {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-white);
+  box-shadow: var(--shadow-md);
+  color: var(--color-primary-900);
+  transition: background-color var(--duration-fast) var(--ease-standard),
+              color var(--duration-fast) var(--ease-standard);
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 0.9rem;
+  font-weight: var(--fw-bold);
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background-color: var(--color-accent-500);
+  color: var(--color-primary-900);
+}
+
+.swiper-button-disabled {
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+/* ---------- Brand Logo Carousel specific ---------- */
+.brand-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90px;
+  padding: var(--space-4);
+  filter: grayscale(100%);
+  opacity: 0.6;
+  transition: filter var(--duration-base) var(--ease-standard),
+              opacity var(--duration-base) var(--ease-standard),
+              transform var(--duration-base) var(--ease-standard);
+}
+
+.brand-slide:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.brand-slide img {
+  max-height: 48px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* ---------- Product Gallery Thumbs ---------- */
+.product-gallery__thumbs .swiper-slide {
+  opacity: 0.55;
+  cursor: pointer;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 2px solid transparent;
+  transition: opacity var(--duration-fast) var(--ease-standard),
+              border-color var(--duration-fast) var(--ease-standard);
+}
+
+.product-gallery__thumbs .swiper-slide-thumb-active {
+  opacity: 1;
+  border-color: var(--color-accent-500);
+}

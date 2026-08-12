@@ -1,0 +1,63 @@
+<!--
+  partials/mega-menu.html
+  Gada Electronics — Reusable mega-menu panel markup.
+
+  This is the FULL content that goes inside the mega-menu <div> in every
+  page's header (the one marked data-js="mega-menu-panel" id="productsMegaMenu").
+  Since the project is static HTML with no templating engine, copy this
+  entire block into each page in place of the placeholder <p> tag —
+  keep the wrapping <div id="productsMegaMenu" data-js="mega-menu-panel">
+  from the page itself and only replace what's inside it.
+
+  Category links point to products.html with a query param the
+  product-filters.js module reads on load to pre-apply that filter —
+  wire that up in product-filters.js if not already present.
+-->
+
+<div class="l-container mega-menu__inner">
+  <div class="mega-menu__columns">
+
+    <div class="mega-menu__col">
+      <h4 class="mega-menu__col-title">Electrical Equipment</h4>
+      <ul class="mega-menu__list">
+        <li><a href="products.html?category=switchgear"><i class="fa-solid fa-plug-circle-bolt"></i> Switchgear &amp; Protection</a></li>
+        <li><a href="products.html?category=transformers"><i class="fa-solid fa-bolt"></i> Transformers</a></li>
+        <li><a href="products.html?category=cables"><i class="fa-solid fa-diagram-project"></i> Cables &amp; Wiring</a></li>
+        <li><a href="products.html?category=panels"><i class="fa-solid fa-server"></i> Distribution Panels</a></li>
+      </ul>
+    </div>
+
+    <div class="mega-menu__col">
+      <h4 class="mega-menu__col-title">Automation &amp; Control</h4>
+      <ul class="mega-menu__list">
+        <li><a href="products.html?category=plc-scada"><i class="fa-solid fa-microchip"></i> PLC &amp; SCADA Systems</a></li>
+        <li><a href="products.html?category=drives"><i class="fa-solid fa-gauge-high"></i> Motors &amp; Drives</a></li>
+        <li><a href="products.html?category=sensors"><i class="fa-solid fa-satellite-dish"></i> Sensors &amp; Instrumentation</a></li>
+        <li><a href="products.html?category=control-panels"><i class="fa-solid fa-sliders"></i> Control Panels</a></li>
+      </ul>
+    </div>
+
+    <div class="mega-menu__col">
+      <h4 class="mega-menu__col-title">Safety &amp; Support</h4>
+      <ul class="mega-menu__list">
+        <li><a href="products.html?category=safety"><i class="fa-solid fa-helmet-safety"></i> Safety Equipment</a></li>
+        <li><a href="products.html?category=tools"><i class="fa-solid fa-screwdriver-wrench"></i> Tools &amp; Accessories</a></li>
+        <li><a href="products.html?category=spares"><i class="fa-solid fa-gears"></i> Spare Parts</a></li>
+        <li><a href="products.html"><i class="fa-solid fa-grid-2"></i> View All Products</a></li>
+      </ul>
+    </div>
+
+    <div class="mega-menu__promo">
+      <img src="assets/images/products/mega-menu-promo.jpg" alt="Featured product range" loading="lazy" />
+      <div class="mega-menu__promo-body">
+        <span class="mega-menu__promo-eyebrow">Featured</span>
+        <h4 class="mega-menu__promo-title">Industrial Automation Range</h4>
+        <p class="mega-menu__promo-text">Explore our newest PLC and SCADA integration solutions.</p>
+        <a href="products.html?category=plc-scada" class="mega-menu__promo-link">
+          Explore Range <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</div>

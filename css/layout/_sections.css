@@ -1,0 +1,111 @@
+/* ==========================================================================
+   Gada Electronics — Generic Section Wrappers
+   ========================================================================== */
+
+.section {
+  padding-block: var(--space-8);
+  position: relative;
+}
+
+@media (min-width: 1024px) {
+  .section {
+    padding-block: var(--space-11);
+  }
+}
+
+.section--tight {
+  padding-block: var(--space-6);
+}
+
+@media (min-width: 1024px) {
+  .section--tight {
+    padding-block: var(--space-8);
+  }
+}
+
+.section--dark {
+  background-color: var(--color-primary-900);
+  color: var(--color-text-inverse);
+}
+
+.section--alt {
+  background-color: var(--color-bg-alt);
+}
+
+.section__header {
+  max-width: 640px;
+  margin-bottom: var(--space-8);
+}
+
+.section__header--center {
+  margin-inline: auto;
+  text-align: center;
+}
+
+.section__header-top {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--space-6);
+  margin-bottom: var(--space-8);
+}
+
+.section__title {
+  font-size: var(--fs-h2);
+}
+
+.section__subtitle {
+  margin-top: var(--space-3);
+  color: var(--color-text-secondary);
+  font-size: var(--fs-body-lg);
+}
+
+.section--dark .section__subtitle {
+  color: var(--color-steel-300);
+}
+
+.section-divider {
+  height: 1px;
+  width: 100%;
+  background-color: var(--color-border);
+  border: none;
+}
+
+.section--dark .section-divider {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ---------- Background pattern layer used on select industrial sections ---------- */
+.section--pattern {
+  position: relative;
+  overflow: hidden;
+}
+
+.section--pattern::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../../assets/images/patterns/circuit-pattern.svg");
+  background-repeat: repeat;
+  opacity: 0.04;
+  pointer-events: none;
+}
+
+.section--pattern > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ---------- Hero background video ---------- */
+/* NOTE: .hero / .hero__overlay / .hero__content positioning rules live in
+   pages/_home.css (hero is homepage-only). This rule only styles the
+   <video> element itself; it assumes .hero already has position: relative
+   from wherever that's defined. */
+.hero__bg-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}

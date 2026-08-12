@@ -1,0 +1,186 @@
+/* ==========================================================================
+   _navbar.css — Gada Electronics
+   Handles: logo swap, nav links, mega-menu trigger, CTA, mobile toggle.
+   Two header states:
+   1. Default (transparent, sits over hero) — white text, white logo
+   2. Scrolled (site-header.is-scrolled, added by JS on scroll) — solid bg, dark text, dark logo
+   ========================================================================== */
+
+.navbar {
+  width: 100%;
+  padding: 20px 0;
+}
+
+.navbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+/* ---------- Logo ---------- */
+.navbar__logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.navbar__logo-img {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+
+/* Only ONE logo variant shows at a time */
+.navbar__logo-img--dark {
+  display: none;
+}
+.navbar__logo-img--light {
+  display: block;
+}
+
+/* Default transparent header (over hero) uses the light/white logo + white text */
+.site-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: transparent;
+  transition: background-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Scrolled state: solid background, switch to dark logo + dark text */
+.site-header.is-scrolled {
+  position: fixed;
+  background-color: #ffffff;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.site-header.is-scrolled .navbar__logo-img--dark {
+  display: block;
+}
+.site-header.is-scrolled .navbar__logo-img--light {
+  display: none;
+}
+
+/* ---------- Nav links ---------- */
+.navbar__links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar__links a {
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: #ffffff;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.2s ease;
+}
+
+.navbar__links a:hover {
+  color: #f5a623;
+}
+
+.site-header.is-scrolled .navbar__links a {
+  color: #1a1a1a;
+}
+.site-header.is-scrolled .navbar__links a:hover {
+  color: #f5a623;
+}
+
+.navbar__caret {
+  font-size: 11px;
+  transition: transform 0.2s ease;
+}
+
+.navbar__item--has-mega.is-open .navbar__caret {
+  transform: rotate(180deg);
+}
+
+/* ---------- Actions (CTA + mobile trigger) ---------- */
+.navbar__actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navbar__cta {
+  white-space: nowrap;
+}
+
+.navbar__mobile-trigger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 32px;
+  height: 32px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.navbar__mobile-trigger span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff;
+  border-radius: 2px;
+  transition: background-color 0.2s ease;
+}
+
+.site-header.is-scrolled .navbar__mobile-trigger span {
+  background-color: #1a1a1a;
+}
+
+/* ---------- Mega menu trigger area ---------- */
+.navbar__item--has-mega {
+  position: relative;
+}
+
+.mega-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: #ffffff;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+  z-index: 90;
+}
+
+/* Hover-to-open removed — the panel now only opens via the .is-open
+   class, which mega-menu.js toggles on click/tap (and on keyboard focus). */
+.mega-menu.is-open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.mega-menu__inner {
+  padding: 32px 0;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 992px) {
+  .navbar__links,
+  .navbar__cta {
+    display: none;
+  }
+  .navbar__mobile-trigger {
+    display: flex;
+  }
+}

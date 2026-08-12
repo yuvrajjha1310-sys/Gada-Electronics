@@ -1,0 +1,146 @@
+/* ==========================================================================
+   print.css
+   Gada Electronics — Print Stylesheet
+   Linked with media="print" — keeps printed pages (quotes, spec sheets,
+   job postings, contact info) clean, ink-friendly, and free of UI chrome.
+   ========================================================================== */
+
+@media print {
+
+  /* ---------- 1. Reset backgrounds & shadows (save ink) ---------- */
+  * {
+    background: transparent !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    color: #000 !important;
+  }
+
+  html,
+  body {
+    background: #fff !important;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 12pt;
+    line-height: 1.4;
+  }
+
+  /* ---------- 2. Hide non-printable UI chrome ---------- */
+  .skip-link,
+  header.site-header,
+  .navbar,
+  .mega-menu,
+  .mobile-menu,
+  #backToTop,
+  .back-to-top,
+  .toast-container,
+  .modal,
+  .loader,
+  .loading-screen,
+  .breadcrumbs,
+  .pagination,
+  [data-js="filters"],
+  .btn,
+  .swiper-button-next,
+  .swiper-button-prev,
+  .swiper-pagination,
+  video,
+  iframe,
+  .site-footer .footer__newsletter,
+  .site-footer .footer__socials {
+    display: none !important;
+  }
+
+  /* ---------- 3. Footer: keep only essential contact info ---------- */
+  .site-footer {
+    border-top: 1px solid #000;
+    padding-top: var(--space-4, 1rem);
+    margin-top: var(--space-6, 2rem);
+    font-size: 10pt;
+  }
+
+  /* ---------- 4. Links: show destination URLs (except empty/anchor links) ---------- */
+  a {
+    color: #000 !important;
+    text-decoration: underline !important;
+  }
+
+  a[href^="http"]:not([href*="gadaelectronics"])::after {
+    content: " (" attr(href) ")";
+    font-size: 9pt;
+    font-weight: normal;
+  }
+
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  /* ---------- 5. Headings & page-break control ---------- */
+  h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid;
+    break-after: avoid;
+    color: #000 !important;
+  }
+
+  h1 {
+    font-size: 22pt;
+  }
+
+  h2 {
+    font-size: 18pt;
+  }
+
+  h3 {
+    font-size: 14pt;
+  }
+
+  p, table, figure, .card {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  /* ---------- 6. Images ---------- */
+  img {
+    max-width: 100% !important;
+    filter: grayscale(100%);
+  }
+
+  /* ---------- 7. Tables (spec sheets, certifications) ---------- */
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  table, th, td {
+    border: 1px solid #000 !important;
+  }
+
+  th, td {
+    padding: 6pt 8pt;
+  }
+
+  /* ---------- 8. Containers: full width, no side padding ---------- */
+  .l-container {
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+
+  /* ---------- 9. Page margins ---------- */
+  @page {
+    margin: 2cm 1.5cm;
+  }
+
+  /* ---------- 10. Print-only branding header (logo + tagline as text) ---------- */
+  body::before {
+    content: "GADA ELECTRONICS — Powering Industries Through Innovation";
+    display: block;
+    font-weight: 700;
+    font-size: 10pt;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    border-bottom: 2px solid #000;
+    padding-bottom: 8pt;
+    margin-bottom: 16pt;
+  }
+}

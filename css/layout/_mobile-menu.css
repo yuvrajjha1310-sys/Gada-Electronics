@@ -1,0 +1,165 @@
+/* ==========================================================================
+   Gada Electronics — Off-canvas Mobile Menu
+   Hidden off-screen by default, slides in when .is-open is toggled by
+   js/components/mobile-menu.js. Hamburger trigger + panel are shown only
+   below the --bp-lg (1024px) breakpoint via _navbar.css.
+   ========================================================================== */
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: min(320px, 85vw);
+  background-color: var(--color-primary-900);
+  z-index: var(--z-mobile-menu);
+  transform: translateX(100%);
+  transition: transform var(--duration-slow) var(--ease-standard);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-lg);
+}
+
+.mobile-menu.is-open {
+  transform: translateX(0);
+}
+
+.mobile-menu__overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(10, 22, 40, 0.6);
+  z-index: calc(var(--z-mobile-menu) - 1);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--duration-base) var(--ease-standard),
+              visibility var(--duration-base);
+}
+
+body.has-mobile-menu-open .mobile-menu__overlay {
+  opacity: 1;
+  visibility: visible;
+}
+
+body.has-mobile-menu-open {
+  overflow: hidden;
+}
+
+.mobile-menu__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.mobile-menu__logo img {
+  height: 32px;
+  width: auto;
+}
+
+.mobile-menu__close {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.25rem;
+  cursor: pointer;
+  padding: var(--space-2);
+}
+
+.mobile-menu__nav {
+  padding: var(--space-4) var(--space-5);
+  flex: 1;
+}
+
+.mobile-menu__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.mobile-menu__list > li {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.mobile-menu__list a {
+  display: block;
+  padding: var(--space-4) 0;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.mobile-menu__item-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mobile-menu__submenu-toggle {
+  background: none;
+  border: none;
+  color: #fff;
+  padding: var(--space-3);
+  cursor: pointer;
+  transition: transform var(--duration-fast) var(--ease-standard);
+}
+
+.mobile-menu__submenu-toggle[aria-expanded="true"] {
+  transform: rotate(180deg);
+}
+
+.mobile-menu__submenu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--duration-base) var(--ease-standard);
+}
+
+.mobile-menu__submenu.is-open {
+  max-height: 500px;
+}
+
+.mobile-menu__submenu a {
+  padding: var(--space-2) 0 var(--space-2) var(--space-4);
+  font-weight: 400;
+  color: var(--color-primary-200);
+}
+
+.mobile-menu__footer {
+  padding: var(--space-5);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.mobile-menu__contact {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+}
+
+.mobile-menu__contact a {
+  color: var(--color-primary-200);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.mobile-menu__socials {
+  display: flex;
+  gap: var(--space-4);
+  margin-top: var(--space-4);
+}
+
+.mobile-menu__socials a {
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+@media (min-width: 1024px) {
+  .mobile-menu,
+  .mobile-menu__overlay {
+    display: none;
+  }
+}

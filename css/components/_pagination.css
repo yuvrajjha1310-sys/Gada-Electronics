@@ -1,0 +1,66 @@
+/* ==========================================================================
+   Gada Electronics — Pagination
+   ========================================================================== */
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  margin-top: var(--space-8);
+  flex-wrap: wrap;
+}
+
+.pagination__item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  height: 40px;
+  padding-inline: var(--space-2);
+  border-radius: var(--radius-md);
+  font-size: var(--fs-body-sm);
+  font-weight: var(--fw-medium);
+  color: var(--color-text-secondary);
+  border: 1px solid var(--color-border);
+  transition: background-color var(--duration-fast) var(--ease-standard),
+              color var(--duration-fast) var(--ease-standard),
+              border-color var(--duration-fast) var(--ease-standard);
+}
+
+.pagination__item:hover {
+  border-color: var(--color-primary-500);
+  color: var(--color-primary-500);
+}
+
+.pagination__item.is-active {
+  background-color: var(--color-primary-900);
+  border-color: var(--color-primary-900);
+  color: var(--color-white);
+  cursor: default;
+}
+
+.pagination__item.is-disabled {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.pagination__ellipsis {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  height: 40px;
+  color: var(--color-steel-400);
+}
+
+.pagination__arrow {
+  font-size: 0.8rem;
+}
+
+.pagination-info {
+  text-align: center;
+  font-size: var(--fs-caption);
+  color: var(--color-text-secondary);
+  margin-top: var(--space-4);
+}

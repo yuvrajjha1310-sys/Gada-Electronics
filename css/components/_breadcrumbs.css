@@ -1,0 +1,73 @@
+/* ==========================================================================
+   Gada Electronics — Breadcrumbs
+   ========================================================================== */
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  font-size: var(--fs-caption);
+}
+
+.breadcrumbs__item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--color-text-secondary);
+}
+
+.breadcrumbs__item a {
+  color: var(--color-text-secondary);
+  transition: color var(--duration-fast) var(--ease-standard);
+}
+
+.breadcrumbs__item a:hover {
+  color: var(--color-accent-600);
+}
+
+.breadcrumbs__item:last-child {
+  color: var(--color-text-primary);
+  font-weight: var(--fw-medium);
+}
+
+.breadcrumbs__separator {
+  color: var(--color-steel-300);
+  font-size: 0.7rem;
+}
+
+/* ---------- Page header banner variant (used at top of interior pages) ---------- */
+.page-banner {
+  background-color: var(--color-primary-900);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding-block: var(--space-9);
+  color: var(--color-text-inverse);
+}
+
+.page-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(10, 22, 40, 0.55) 0%, rgba(10, 22, 40, 0.9) 100%);
+}
+
+.page-banner__content {
+  position: relative;
+  z-index: 1;
+}
+
+.page-banner .breadcrumbs__item,
+.page-banner .breadcrumbs__item a {
+  color: var(--color-steel-300);
+}
+
+.page-banner .breadcrumbs__item:last-child {
+  color: var(--color-white);
+}
+
+.page-banner__title {
+  font-size: var(--fs-h1);
+  margin-top: var(--space-3);
+}

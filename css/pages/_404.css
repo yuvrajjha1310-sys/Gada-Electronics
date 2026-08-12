@@ -1,0 +1,80 @@
+/* ==========================================================================
+   Gada Electronics — 404 Not Found Page
+   ========================================================================== */
+
+/* This page has no dark page-banner under the header (unlike every other
+   inner page), so the default transparent/white-text header would be
+   invisible against the white body background. Force the solid/"scrolled"
+   appearance permanently regardless of scroll position. */
+body.page-404 .site-header {
+  position: sticky;
+  background-color: #ffffff;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+body.page-404 .navbar__links a {
+  color: #1a1a1a;
+}
+body.page-404 .navbar__logo-img--dark {
+  display: block;
+}
+body.page-404 .navbar__logo-img--light {
+  display: none;
+}
+body.page-404 .navbar__mobile-trigger span {
+  background-color: #1a1a1a;
+}
+
+.error-page {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-block: var(--space-9);
+}
+
+.error-page__content {
+  max-width: 520px;
+}
+
+.error-page__code {
+  font-family: var(--font-heading);
+  font-size: clamp(6rem, 15vw, 10rem);
+  font-weight: var(--fw-bold);
+  line-height: 1;
+  color: var(--color-primary-100);
+  position: relative;
+}
+
+.error-page__code span {
+  color: var(--color-accent-500);
+}
+
+.error-page__icon {
+  font-size: 2.5rem;
+  color: var(--color-primary-400);
+  margin-bottom: var(--space-5);
+}
+
+.error-page__title {
+  font-size: var(--fs-h2);
+  margin-top: var(--space-3);
+}
+
+.error-page__text {
+  margin-top: var(--space-4);
+  color: var(--color-text-secondary);
+}
+
+.error-page__actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  margin-top: var(--space-8);
+}
+
+.error-page__search {
+  max-width: 420px;
+  margin: var(--space-8) auto 0;
+}

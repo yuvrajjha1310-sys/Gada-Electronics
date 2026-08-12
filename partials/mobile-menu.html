@@ -1,0 +1,73 @@
+<!--
+  partials/mobile-menu.html
+  Gada Electronics — Reusable off-canvas mobile menu markup.
+
+  This is the FULL content that goes inside the mobile-menu <div> in every
+  page (the one marked data-js="mobile-menu-panel" id="mobileMenuPanel").
+  Replace the placeholder <div class="mobile-menu__placeholder"> in each
+  page with everything below.
+
+  Submenu toggle (Products) is handled by mobile-menu.js's
+  bindSubmenuToggles() — it just needs the data-js="mobile-submenu-toggle"
+  button wired to aria-controls pointing at the submenu's id, exactly as
+  below.
+-->
+
+<div class="mobile-menu__header">
+  <a href="index.html" class="mobile-menu__logo">
+    <img src="assets/images/logo/logo-primary.svg" alt="Gada Electronics" />
+  </a>
+  <button type="button" class="mobile-menu__close" data-js="mobile-menu-close" aria-label="Close menu">
+    <i class="fa-solid fa-xmark"></i>
+  </button>
+</div>
+
+<nav class="mobile-menu__nav">
+  <ul class="mobile-menu__list">
+    <li><a href="index.html" data-nav-link="home">Home</a></li>
+    <li><a href="about.html" data-nav-link="about">About</a></li>
+
+    <li class="mobile-menu__item--has-submenu">
+      <div class="mobile-menu__item-row">
+        <a href="products.html" data-nav-link="products">Products</a>
+        <button type="button" class="mobile-menu__submenu-toggle" data-js="mobile-submenu-toggle"
+                aria-controls="mobileProductsSubmenu" aria-expanded="false" aria-label="Toggle Products submenu">
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+      </div>
+      <ul class="mobile-menu__submenu" id="mobileProductsSubmenu">
+        <li><a href="products.html?category=switchgear">Switchgear &amp; Protection</a></li>
+        <li><a href="products.html?category=transformers">Transformers</a></li>
+        <li><a href="products.html?category=cables">Cables &amp; Wiring</a></li>
+        <li><a href="products.html?category=plc-scada">PLC &amp; SCADA Systems</a></li>
+        <li><a href="products.html?category=drives">Motors &amp; Drives</a></li>
+        <li><a href="products.html?category=safety">Safety Equipment</a></li>
+        <li><a href="products.html" class="mobile-menu__submenu-all">View All Products</a></li>
+      </ul>
+    </li>
+
+    <li><a href="industries.html" data-nav-link="industries">Industries</a></li>
+    <li><a href="services.html" data-nav-link="services">Services</a></li>
+    <li><a href="brands.html" data-nav-link="brands">Brands</a></li>
+    <li><a href="projects.html" data-nav-link="projects">Projects</a></li>
+    <li><a href="quality.html" data-nav-link="quality">Quality</a></li>
+    <li><a href="certifications.html" data-nav-link="certifications">Certifications</a></li>
+    <li><a href="careers.html" data-nav-link="careers">Careers</a></li>
+    <li><a href="contact.html" data-nav-link="contact">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="mobile-menu__footer">
+  <a href="contact.html" class="btn btn--primary btn--block">Get a Quote</a>
+
+  <div class="mobile-menu__contact">
+    <a href="tel:+911234567890"><i class="fa-solid fa-phone"></i> +91 12345 67890</a>
+    <a href="mailto:info@gadaelectronics.com"><i class="fa-solid fa-envelope"></i> info@gadaelectronics.com</a>
+  </div>
+
+  <div class="mobile-menu__socials">
+    <a href="#" aria-label="Gada Electronics on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+    <a href="#" aria-label="Gada Electronics on Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+    <a href="#" aria-label="Gada Electronics on YouTube"><i class="fa-brands fa-youtube"></i></a>
+  </div>
+</div>

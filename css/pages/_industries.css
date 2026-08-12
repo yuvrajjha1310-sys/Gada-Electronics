@@ -1,0 +1,126 @@
+/* ==========================================================================
+   Gada Electronics — Industries We Serve Page
+   ========================================================================== */
+
+.industries-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: var(--space-6);
+}
+
+@media (min-width: 640px) {
+  .industries-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 1024px) {
+  .industries-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+.industry-tile {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  color: var(--color-text-inverse);
+}
+
+.industry-tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--duration-slow) var(--ease-standard);
+}
+
+.industry-tile:hover img {
+  transform: scale(1.08);
+}
+
+.industry-tile__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(10, 22, 40, 0.1) 0%, rgba(10, 22, 40, 0.9) 100%);
+}
+
+.industry-tile__content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: var(--space-6);
+}
+
+.industry-tile__icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(4px);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  margin-bottom: var(--space-3);
+}
+
+.industry-tile__title {
+  font-size: var(--fs-h4);
+}
+
+.industry-tile__text {
+  margin-top: var(--space-2);
+  font-size: var(--fs-body-sm);
+  color: var(--color-steel-300);
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height var(--duration-base) var(--ease-standard),
+              opacity var(--duration-base) var(--ease-standard),
+              margin-top var(--duration-base) var(--ease-standard);
+}
+
+.industry-tile:hover .industry-tile__text {
+  max-height: 80px;
+  opacity: 1;
+}
+
+.industry-tile__link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+  font-size: var(--fs-body-sm);
+  font-weight: var(--fw-medium);
+  color: var(--color-accent-400);
+}
+
+/* ---------- Industry Solutions List (icon + text rows) ---------- */
+.solution-row {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-5);
+  padding-block: var(--space-6);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.solution-row:last-child {
+  border-bottom: none;
+}
+
+.solution-row__number {
+  font-family: var(--font-heading);
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-bold);
+  color: var(--color-steel-200);
+  flex-shrink: 0;
+  width: 64px;
+}
+
+.solution-row__title {
+  font-size: var(--fs-h5);
+  margin-bottom: var(--space-2);
+}
+
+.solution-row__text {
+  color: var(--color-text-secondary);
+  max-width: 60ch;
+}

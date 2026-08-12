@@ -1,0 +1,150 @@
+{
+  "_readme": "Seed content for the industrial/switchgear category, matching the Product schema in API_CONTRACT.md (section 3.3). Descriptions/specs are paraphrased from public manufacturer/distributor datasheets (Aug 2026) — verify current pricing/availability before publishing. `image` is a real, openly-licensed (Creative Commons) photo of the correct equipment TYPE from Wikimedia Commons — genuine hardware, not a diagram or AI render — but is not necessarily the exact Siemens/ABB/etc. branded unit, since brand-exact photography needs a manufacturer media-kit licence (see `imageSourceNote`). CC-BY-SA images legally require the credit line in `image.credit` to be displayed wherever the image is shown.",
+  "products": [
+    {
+      "slug": "mcb-miniature-circuit-breaker-32a",
+      "name": "MCB Circuit Breaker 32A (Double Pole)",
+      "brand": { "name": "Siemens", "slug": "siemens" },
+      "category": { "name": "Switches & MCBs", "slug": "switches" },
+      "shortDescription": "Siemens SENTRON double-pole miniature circuit breaker rated 32A, for overload and short-circuit protection in industrial and commercial low-voltage installations.",
+      "description": "This is a double-pole miniature circuit breaker from Siemens' SENTRON range, built to automatically disconnect a circuit when it detects an overload or short-circuit fault, protecting downstream wiring and equipment from damage. Its C-curve trip characteristic makes it a good fit for circuits with moderate inrush current, such as mixed lighting/power loads in commercial and light-industrial settings. It mounts on a standard DIN rail for quick installation into any compatible distribution board.",
+      "specifications": {
+        "poles": "2 (Double Pole)",
+        "ratedCurrent": "32A",
+        "trippingCharacteristic": "Type C",
+        "ratedVoltage": "230/400V AC",
+        "breakingCapacity": "7.5–10 kA",
+        "mounting": "DIN rail",
+        "standardsCompliance": "IEC/EN 60898-1, IEC/EN 60947-2"
+      },
+      "image": {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/MCB_Hager_C10.jpg",
+        "license": "CC BY-SA 4.0",
+        "credit": "MCB Hager C10.jpg — Wikimedia Commons, CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:MCB_Hager_C10.jpg",
+        "note": "Genuine DIN-rail MCB photo — brand shown is Hager, not Siemens (no open-licensed Siemens SENTRON MCB photo exists)."
+      },
+      "imageSourceNote": "For the exact Siemens SENTRON unit, official imagery is on siemens.com or via an authorized Siemens distributor portal — requires dealer/media-kit access for commercial reuse."
+    },
+    {
+      "slug": "distribution-transformer-100kva",
+      "name": "Distribution Transformer 100kVA",
+      "brand": { "name": "ABB", "slug": "abb" },
+      "category": { "name": "Transformers", "slug": "transformers" },
+      "shortDescription": "ABB 100kVA three-phase, oil-cooled distribution transformer, 11kV primary to 433V secondary, for stepping down medium-voltage supply to industrial/commercial low-voltage use.",
+      "description": "A three-phase, oil-immersed distribution transformer rated at 100kVA, designed to step down an 11kV medium-voltage feed to a 433V low-voltage output for use in factories, commercial buildings, and utility networks. Natural oil cooling (ONAN) keeps operating costs down while providing reliable heat dissipation. Typical builds in this class include protective fittings such as a conservator tank, Buchholz relay, oil-level and temperature indicators, a pressure-relief valve, and an off-circuit tap changer for voltage adjustment under no-load conditions.",
+      "specifications": {
+        "ratedPower": "100 kVA",
+        "phases": "3-Phase",
+        "primaryVoltage": "11 kV",
+        "secondaryVoltage": "433 V",
+        "coolingType": "Oil-cooled (ONAN)",
+        "windingMaterial": "Copper",
+        "protectiveFittings": "Conservator tank, Buchholz relay, oil level & temperature indicators, pressure relief valve, off-circuit tap changer"
+      },
+      "image": {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pole_mounted_single-phase_transformer_cutaway.jpg",
+        "license": "CC BY-SA 3.0",
+        "credit": "Photo by Z22 — Wikimedia Commons, CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pole_mounted_single-phase_transformer_cutaway.jpg",
+        "note": "Genuine distribution transformer cutaway — a real single-phase pole-mount unit, not the specific ABB 100kVA 3-phase model."
+      },
+      "imageSourceNote": "For the exact ABB 3-phase unit, imagery is on abb.com or via an authorized ABB channel partner — licensing/dealer terms apply for commercial site use."
+    },
+    {
+      "slug": "smart-distribution-panel",
+      "name": "Smart Distribution Panel",
+      "brand": { "name": "Schneider Electric", "slug": "schneider-electric" },
+      "category": { "name": "Panels", "slug": "panels" },
+      "shortDescription": "Schneider Electric EcoStruxure-connected smart panel with Ethernet-based remote monitoring of circuit breaker status, trip alarms, and energy use.",
+      "description": "An Ethernet-connected low-voltage distribution panel from Schneider Electric's Smart Panels / EcoStruxure Power range. Beyond standard circuit protection, it reports live data on breaker trip status, cycle counts, contact wear, and energy consumption back to a dashboard or app, so facility teams can spot overloads and plan maintenance before a fault causes downtime. It's aimed at commercial and industrial sites that want real-time visibility into their electrical distribution system rather than periodic manual checks.",
+      "specifications": {
+        "connectivity": "Ethernet (EcoStruxure Power)",
+        "monitoring": "Breaker trip status, cycle count, contact wear, energy use",
+        "application": "Commercial & industrial power distribution",
+        "maintenanceModel": "Predictive / condition-based",
+        "alerting": "Real-time dashboard & email alerts"
+      },
+      "image": {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Electrical_Main_and_distribution_panel_for_480_volt.JPG",
+        "license": "CC BY-SA 4.0",
+        "credit": "Electrical Main and distribution panel for 480 volt.JPG — Wikimedia Commons, CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Electrical_Main_and_distribution_panel_for_480_volt.JPG",
+        "note": "Genuine main/distribution panel photo — not Schneider-branded specifically, and has no visible IoT/smart-metering hardware."
+      },
+      "imageSourceNote": "For the exact Schneider EcoStruxure Smart Panel, imagery is on se.com or via Schneider's EcoXpert partner program — commercial reuse requires partner/media-kit permission."
+    },
+    {
+      "slug": "protection-relay-unit",
+      "name": "Protection Relay Unit",
+      "brand": { "name": "Legrand", "slug": "legrand" },
+      "category": { "name": "Protection & Control", "slug": "protection-control" },
+      "shortDescription": "Legrand thermal overload relay for motor circuit protection, tripping on sustained overload or single-phase failure to prevent motor damage.",
+      "description": "A thermal overload relay used alongside a contactor to protect motors and motor circuits from sustained overload conditions, long starting times, or stalling. It includes differential-type sensing, which trips faster if one phase fails, reducing the risk of motor winding damage from single-phasing. Integrated auxiliary contacts (1 NO + 1 NC) allow it to signal an alarm or shut down associated control circuits the moment it trips, and it mounts directly onto a compatible industrial contactor with screw terminals for wiring.",
+      "specifications": {
+        "type": "Thermal overload relay",
+        "auxiliaryContacts": "1 NO + 1 NC",
+        "phaseFailureProtection": "Differential sensing (faster trip on single-phasing)",
+        "mounting": "Direct-mount on compatible contactor",
+        "terminalType": "Screw terminals",
+        "application": "Motor circuit overload & phase-failure protection"
+      },
+      "image": {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Protective_Relays_Hydroelectric_Station.JPG",
+        "license": "CC BY-SA 3.0",
+        "credit": "Photo by Wtshymanski — Wikimedia Commons, CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Protective_Relays_Hydroelectric_Station.JPG",
+        "note": "Genuine protective relay hardware (electromechanical over-current relays at a hydro station) — not Legrand-branded, and not the exact thermal-overload form factor."
+      },
+      "imageSourceNote": "For the exact Legrand relay, imagery is on legrand.com's e-catalogue or via a Legrand distributor — commercial reuse needs distributor/media-kit authorization."
+    },
+    {
+      "slug": "xlpe-armoured-cable",
+      "name": "XLPE Armoured Cable (Per Meter)",
+      "brand": { "name": "Polycab", "slug": "polycab" },
+      "category": { "name": "Cables & Wires", "slug": "cables" },
+      "shortDescription": "Polycab copper-conductor, XLPE-insulated, galvanized-steel-armoured power cable rated 1.1kV, for underground and industrial power distribution runs.",
+      "description": "A multi-core power cable with stranded copper conductors, cross-linked polyethylene (XLPE) insulation, and galvanized steel wire armouring, built for 1.1kV low-voltage distribution. The XLPE insulation gives it better thermal, moisture, and short-circuit performance than older PVC-insulated cable, while the steel armour adds mechanical protection for direct burial or exposure to rodents and physical damage. It's manufactured to IS 7098 (Part 1) and is available in flame-retardant (FR) and flame-retardant low-smoke (FRLS) sheath variants for use in enclosed industrial and commercial spaces.",
+      "specifications": {
+        "conductor": "Stranded copper",
+        "insulation": "XLPE",
+        "armouring": "Galvanized steel wire",
+        "voltageGrade": "1.1 kV (650/1100V)",
+        "sheathOptions": "FR / FRLS",
+        "standard": "IS 7098 (Part 1)",
+        "unit": "Sold per meter"
+      },
+      "image": {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kabelverlegung-Tiefbau.JPG",
+        "license": "Public Domain (PD-self)",
+        "credit": "Photo by Mattes — Wikimedia Commons, Public Domain",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kabelverlegung-Tiefbau.JPG",
+        "note": "Genuine underground power cable installation — not Polycab-branded, and not a studio product shot of the cable itself."
+      },
+      "imageSourceNote": "For the exact Polycab cable, imagery/datasheets are on polycab.com or via an authorized Polycab distributor — commercial site use requires a distributor agreement."
+    },
+    {
+      "slug": "low-voltage-switchgear-unit",
+      "name": "Low Voltage Switchgear Unit",
+      "brand": { "name": "Eaton", "slug": "eaton" },
+      "category": { "name": "Switchgear", "slug": "switchgear" },
+      "shortDescription": "Eaton IEC 61439-compliant low-voltage switchgear assembly for power distribution and motor control in commercial and industrial facilities.",
+      "description": "A low-voltage switchgear assembly from Eaton, built to the IEC 61439-2 standard that governs design verification, temperature rise, and short-circuit withstand for switchgear used in commercial and industrial power distribution. Depending on configuration, it houses fixed, removable, or withdrawable circuit breakers for power distribution and motor control duties, with steel or polycarbonate enclosure options rated for different IP protection levels. It's intended for facilities — data centers, oil & gas, manufacturing plants — that need dependable fault protection with room to scale as load requirements grow.",
+      "specifications": {
+        "standard": "IEC/EN 61439-2",
+        "configuration": "Fixed / removable / withdrawable circuit breakers",
+        "enclosureMaterial": "Steel or polycarbonate",
+        "protectionRating": "IP31–IP42 (model-dependent)",
+        "application": "Power distribution & motor control, commercial/industrial"
+      },
+      "image": {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Medium_voltage_panel.jpg",
+        "license": "CC BY-SA 3.0",
+        "credit": "Photo by Zen 38 — Wikimedia Commons, CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Medium_voltage_panel.jpg",
+        "note": "Genuine switchgear cabinet photo — not Eaton-branded, and this particular unit is medium-voltage rather than low-voltage."
+      },
+      "imageSourceNote": "For the exact Eaton LV switchgear, imagery is on eaton.com or via an authorized Eaton distributor — commercial reuse requires distributor/media-kit permission."
+    }
+  ]
+}

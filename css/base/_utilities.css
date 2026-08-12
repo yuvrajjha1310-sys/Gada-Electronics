@@ -1,0 +1,149 @@
+/* ==========================================================================
+   Gada Electronics — Utility Classes
+   Prefix key: u- (utility), l- (layout), is-/has- (state)
+   ========================================================================== */
+
+/* ---------- Layout ---------- */
+.l-container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--container-padding);
+}
+
+.l-grid {
+  display: grid;
+  gap: var(--grid-gutter-mobile);
+}
+
+@media (min-width: 768px) {
+  .l-grid {
+    gap: var(--grid-gutter);
+  }
+}
+
+.l-grid--2,
+.l-grid--2col { grid-template-columns: repeat(1, 1fr); }
+.l-grid--3 { grid-template-columns: repeat(1, 1fr); }
+.l-grid--4,
+.l-grid--4col { grid-template-columns: repeat(1, 1fr); }
+
+@media (min-width: 640px) {
+  .l-grid--2,
+  .l-grid--2col { grid-template-columns: repeat(2, 1fr); }
+  .l-grid--3 { grid-template-columns: repeat(2, 1fr); }
+  .l-grid--4,
+  .l-grid--4col { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 1024px) {
+  .l-grid--3 { grid-template-columns: repeat(3, 1fr); }
+  .l-grid--4,
+  .l-grid--4col { grid-template-columns: repeat(4, 1fr); }
+}
+
+.l-grid--align-center {
+  align-items: center;
+}
+
+.l-flex {
+  display: flex;
+}
+
+.l-flex--center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.l-flex--between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ---------- Visibility ---------- */
+.u-hidden {
+  display: none !important;
+}
+
+.u-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 767px) {
+  .u-hidden-mobile { display: none !important; }
+}
+
+@media (min-width: 768px) {
+  .u-hidden-desktop { display: none !important; }
+}
+
+/* ---------- Text ---------- */
+.u-text-center { text-align: center; }
+.u-text-left { text-align: left; }
+.u-text-right { text-align: right; }
+.u-uppercase { text-transform: uppercase; }
+
+/* ---------- Spacing ---------- */
+.u-mt-0 { margin-top: 0; }
+.u-mt-2 { margin-top: var(--space-2); }
+.u-mt-4 { margin-top: var(--space-4); }
+.u-mt-6 { margin-top: var(--space-6); }
+.u-mt-8 { margin-top: var(--space-8); }
+.u-mb-0 { margin-bottom: 0; }
+.u-mb-2 { margin-bottom: var(--space-2); }
+.u-mb-4 { margin-bottom: var(--space-4); }
+.u-mb-6 { margin-bottom: var(--space-6); }
+.u-mb-8 { margin-bottom: var(--space-8); }
+
+.u-py-section {
+  padding-block: var(--space-8);
+}
+
+@media (min-width: 1024px) {
+  .u-py-section {
+    padding-block: var(--space-11);
+  }
+}
+
+/* ---------- Backgrounds ---------- */
+.u-bg-alt { background-color: var(--color-bg-alt); }
+.u-bg-dark { background-color: var(--color-bg-dark); color: var(--color-text-inverse); }
+
+/* ---------- Skip Link (Accessibility) ---------- */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: var(--space-4);
+  z-index: var(--z-toast);
+  background-color: var(--color-accent-500);
+  color: var(--color-primary-900);
+  padding: var(--space-3) var(--space-5);
+  border-radius: var(--radius-md);
+  font-weight: var(--fw-semibold);
+  transition: top var(--duration-base) var(--ease-standard);
+}
+
+.skip-link:focus {
+  top: var(--space-4);
+}
+
+/* ---------- Focus Visibility ---------- */
+:focus-visible {
+  outline: 2px solid var(--color-accent-500);
+  outline-offset: 2px;
+}
+
+/* ---------- Aspect Ratios ---------- */
+.u-aspect-4-3 { aspect-ratio: 4 / 3; }
+.u-aspect-16-9 { aspect-ratio: 16 / 9; }
+.u-aspect-1-1 { aspect-ratio: 1 / 1; }

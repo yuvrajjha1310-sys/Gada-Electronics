@@ -1,0 +1,95 @@
+/* ==========================================================================
+   Gada Electronics — Testimonials
+   ========================================================================== */
+
+.testimonial-card {
+  background-color: var(--color-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  padding: var(--space-7);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial-card__quote-icon {
+  font-size: 2rem;
+  color: var(--color-accent-400);
+  margin-bottom: var(--space-4);
+}
+
+.testimonial-card__rating {
+  display: flex;
+  gap: 2px;
+  color: var(--color-accent-500);
+  font-size: 0.85rem;
+  margin-bottom: var(--space-4);
+}
+
+.testimonial-card__message {
+  font-size: var(--fs-body);
+  color: var(--color-text-primary);
+  line-height: var(--lh-body);
+  flex: 1;
+}
+
+.testimonial-card__footer {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin-top: var(--space-6);
+  padding-top: var(--space-5);
+  border-top: 1px solid var(--color-border);
+}
+
+.testimonial-card__avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.testimonial-card__name {
+  font-size: var(--fs-body-sm);
+  font-weight: var(--fw-semibold);
+  color: var(--color-text-primary);
+}
+
+.testimonial-card__company {
+  font-size: var(--fs-caption);
+  color: var(--color-text-secondary);
+}
+
+/* ---------- Dark section variant ---------- */
+.section--dark .testimonial-card {
+  background-color: var(--color-primary-800);
+}
+
+.section--dark .testimonial-card__message {
+  color: var(--color-steel-200);
+}
+
+.section--dark .testimonial-card__name {
+  color: var(--color-white);
+}
+
+.section--dark .testimonial-card__footer {
+  border-top-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ---------- Swiper pagination/nav positioning specific to testimonials ---------- */
+.testimonial-slider {
+  padding-bottom: var(--space-9);
+}
+
+.testimonial-slider .swiper-pagination {
+  bottom: 0;
+}
+
+.testimonial-slider__nav {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-3);
+  margin-top: var(--space-6);
+}

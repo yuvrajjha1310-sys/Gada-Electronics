@@ -1,0 +1,63 @@
+/* ==========================================================================
+   main.css
+   Gada Electronics — Master Stylesheet
+   Single file linked in <head> of every HTML page.
+   Assembles all partials via @import in strict ITCSS-inspired cascade order:
+   1. Vendor  2. Base  3. Layout  4. Components  5. Pages
+   (Vendor loaded first so our design tokens always win the specificity war.)
+   ========================================================================== */
+
+/* ---------- 1. VENDOR (third-party libraries) ---------- */
+@import url("vendor/aos.css");
+@import url("vendor/swiper-bundle.min.css");
+
+/* ---------- 2. BASE (reset, tokens, typography, utilities) ---------- */
+@import url("base/_reset.css");
+@import url("base/_variables.css");
+@import url("base/_typography.css");
+@import url("base/_utilities.css");
+
+/* ---------- 3. LAYOUT (structural, page-skeleton pieces) ---------- */
+@import url("layout/_grid.css");
+@import url("layout/_header.css");
+@import url("layout/_navbar.css");
+@import url("layout/_mega-menu.css");
+@import url("layout/_sections.css");
+@import url("layout/_footer.css");
+@import url("layout/_mobile-menu.css");
+
+/* ---------- 4. COMPONENTS (reusable UI pieces, alphabetical) ---------- */
+@import url("components/_buttons.css");
+@import url("components/_cards.css");
+@import url("components/_forms.css");
+@import url("components/_badges.css");
+@import url("components/_breadcrumbs.css");
+@import url("components/_tabs.css");
+@import url("components/_accordion.css");
+@import url("components/_pagination.css");
+@import url("components/_modals.css");
+@import url("components/_tooltips.css");
+@import url("components/_toast.css");
+@import url("components/_skeleton.css");
+@import url("components/_loader.css");
+@import url("components/_back-to-top.css");
+@import url("components/_counters.css");
+@import url("components/_testimonials.css");
+@import url("components/_swiper-overrides.css");
+
+/* ---------- 5. PAGES (page-specific overrides, scoped under body.page-*) ---------- */
+@import url("pages/_home.css");
+@import url("pages/_about.css");
+@import url("pages/_products.css");
+@import url("pages/_product-details.css");
+@import url("pages/_industries.css");
+@import url("pages/_services.css");
+@import url("pages/_brands.css");
+@import url("pages/_projects.css");
+@import url("pages/_project-details.css");
+@import url("pages/_quality.css");
+@import url("pages/_certifications.css");
+@import url("pages/_careers.css");
+@import url("pages/_job-details.css");
+@import url("pages/_contact.css");
+@import url("pages/_404.css");

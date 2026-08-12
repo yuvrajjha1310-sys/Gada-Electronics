@@ -1,0 +1,164 @@
+/* ==========================================================================
+   Gada Electronics — About Us Page
+   ========================================================================== */
+
+.about-hero {
+  padding-block: var(--space-9);
+}
+
+.about-hero__grid {
+  display: grid;
+  gap: var(--space-8);
+}
+
+@media (min-width: 1024px) {
+  .about-hero__grid {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+}
+
+.about-hero__media {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.about-hero__media img {
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+/* ---------- Mission / Vision / Values ---------- */
+.value-card {
+  padding: var(--space-6);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  transition: border-color var(--duration-base) var(--ease-standard),
+              box-shadow var(--duration-base) var(--ease-standard);
+}
+
+.value-card:hover {
+  border-color: transparent;
+  box-shadow: var(--shadow-md);
+}
+
+.value-card__icon {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-md);
+  background-color: var(--color-accent-100);
+  color: var(--color-accent-600);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.375rem;
+  margin-bottom: var(--space-5);
+}
+
+/* ---------- Timeline (Company History) ---------- */
+.timeline {
+  position: relative;
+  padding-left: var(--space-8);
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 6px;
+  bottom: 6px;
+  width: 2px;
+  background-color: var(--color-border);
+}
+
+.timeline__item {
+  position: relative;
+  padding-bottom: var(--space-8);
+}
+
+.timeline__item:last-child {
+  padding-bottom: 0;
+}
+
+.timeline__dot {
+  position: absolute;
+  left: calc(-1 * var(--space-8) + 2px);
+  top: 4px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: var(--color-white);
+  border: 3px solid var(--color-accent-500);
+}
+
+.timeline__year {
+  font-family: var(--font-heading);
+  font-size: var(--fs-h4);
+  font-weight: var(--fw-bold);
+  color: var(--color-primary-500);
+}
+
+.timeline__title {
+  font-size: var(--fs-h5);
+  margin-top: var(--space-2);
+}
+
+.timeline__text {
+  margin-top: var(--space-2);
+  color: var(--color-text-secondary);
+  font-size: var(--fs-body-sm);
+  max-width: 60ch;
+}
+
+/* ---------- Leadership / Team ---------- */
+.team-card {
+  text-align: center;
+}
+
+.team-card__media {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  aspect-ratio: 3 / 4;
+  margin-bottom: var(--space-4);
+  position: relative;
+}
+
+.team-card__social {
+  position: absolute;
+  bottom: var(--space-4);
+  left: 50%;
+  transform: translateX(-50%) translateY(12px);
+  display: flex;
+  gap: var(--space-2);
+  opacity: 0;
+  transition: opacity var(--duration-base) var(--ease-standard),
+              transform var(--duration-base) var(--ease-standard);
+}
+
+.team-card:hover .team-card__social {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.team-card__social a {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: var(--color-white);
+  color: var(--color-primary-900);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+}
+
+.team-card__name {
+  font-size: var(--fs-h5);
+}
+
+.team-card__role {
+  font-size: var(--fs-body-sm);
+  color: var(--color-accent-600);
+  margin-top: var(--space-1);
+}

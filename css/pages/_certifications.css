@@ -1,0 +1,107 @@
+/* ==========================================================================
+   Gada Electronics — Certifications Page
+   ========================================================================== */
+
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: var(--space-6);
+}
+
+@media (min-width: 640px) {
+  .certifications-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 1024px) {
+  .certifications-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+.certificate-card {
+  text-align: center;
+  padding: var(--space-7) var(--space-5);
+  cursor: zoom-in;
+}
+
+.certificate-card__frame {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  margin-bottom: var(--space-5);
+  background-color: var(--color-bg-alt);
+}
+
+.certificate-card__frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--duration-base) var(--ease-standard);
+}
+
+.certificate-card:hover .certificate-card__frame img {
+  transform: scale(1.04);
+}
+
+.certificate-card__title {
+  font-size: var(--fs-h5);
+}
+
+.certificate-card__issuer {
+  font-size: var(--fs-body-sm);
+  color: var(--color-text-secondary);
+  margin-top: var(--space-2);
+}
+
+.certificate-card__dates {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-4);
+  margin-top: var(--space-3);
+  font-size: var(--fs-caption);
+  color: var(--color-steel-400);
+}
+
+.certificate-card__download {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+  font-size: var(--fs-body-sm);
+  font-weight: var(--fw-medium);
+  color: var(--color-primary-500);
+}
+
+/* ---------- Compliance Standards Strip ---------- */
+.standards-strip {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-8);
+  padding-block: var(--space-8);
+}
+
+.standards-strip__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  opacity: 0.85;
+  transition: opacity var(--duration-base) var(--ease-standard);
+}
+
+.standards-strip__item:hover {
+  opacity: 1;
+}
+
+.standards-strip__item img {
+  height: 56px;
+  width: auto;
+  object-fit: contain;
+}
+
+.standards-strip__item span {
+  font-size: var(--fs-caption);
+  color: var(--color-text-secondary);
+  font-weight: var(--fw-medium);
+}

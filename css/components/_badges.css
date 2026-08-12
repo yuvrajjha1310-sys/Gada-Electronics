@@ -1,0 +1,80 @@
+/* ==========================================================================
+   Gada Electronics — Badges
+   ========================================================================== */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: 0.3rem 0.75rem;
+  border-radius: var(--radius-full);
+  font-size: var(--fs-caption);
+  font-weight: var(--fw-semibold);
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.badge--accent {
+  background-color: var(--color-accent-500);
+  color: var(--color-primary-900);
+}
+
+.badge--dark {
+  background-color: var(--color-primary-900);
+  color: var(--color-white);
+}
+
+.badge--light {
+  background-color: var(--color-white);
+  color: var(--color-primary-900);
+  box-shadow: var(--shadow-sm);
+}
+
+.badge--success {
+  background-color: rgba(30, 142, 90, 0.12);
+  color: var(--color-success);
+}
+
+.badge--warning {
+  background-color: rgba(224, 164, 0, 0.12);
+  color: var(--color-warning);
+}
+
+.badge--error {
+  background-color: rgba(214, 69, 69, 0.12);
+  color: var(--color-error);
+}
+
+.badge--info {
+  background-color: rgba(43, 125, 174, 0.12);
+  color: var(--color-info);
+}
+
+.badge--outline {
+  background-color: transparent;
+  border: 1px solid currentColor;
+}
+
+.badge--dot::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: currentColor;
+}
+
+/* ---------- Semantic status shortcuts (Applications / Enquiries / Jobs) ---------- */
+.badge--status-new,
+.badge--status-in-stock,
+.badge--status-active { background-color: rgba(30, 142, 90, 0.12); color: var(--color-success); }
+
+.badge--status-pending,
+.badge--status-in-progress,
+.badge--status-pre-order { background-color: rgba(224, 164, 0, 0.12); color: var(--color-warning); }
+
+.badge--status-rejected,
+.badge--status-out-of-stock,
+.badge--status-closed { background-color: rgba(214, 69, 69, 0.12); color: var(--color-error); }
+
+.badge--status-resolved,
+.badge--status-hired { background-color: rgba(43, 125, 174, 0.12); color: var(--color-info); }

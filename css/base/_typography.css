@@ -1,0 +1,102 @@
+/* ==========================================================================
+   Gada Electronics — Typography
+   ========================================================================== */
+
+body {
+  font-family: var(--font-body);
+  font-weight: var(--fw-regular);
+  color: var(--color-text-primary);
+}
+
+h1, .h1 {
+  font-size: var(--fs-h1);
+}
+
+h2, .h2 {
+  font-size: var(--fs-h2);
+}
+
+h3, .h3 {
+  font-size: var(--fs-h3);
+}
+
+h4, .h4 {
+  font-size: var(--fs-h4);
+}
+
+h5, .h5 {
+  font-size: var(--fs-h5);
+}
+
+.text-display {
+  font-family: var(--font-heading);
+  font-size: var(--fs-display);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-tight);
+  letter-spacing: -0.02em;
+}
+
+.text-lg {
+  font-size: var(--fs-body-lg);
+}
+
+.text-sm {
+  font-size: var(--fs-body-sm);
+}
+
+.text-caption {
+  font-size: var(--fs-caption);
+  color: var(--color-text-secondary);
+}
+
+.text-eyebrow {
+  display: inline-block;
+  font-size: var(--fs-caption);
+  font-weight: var(--fw-semibold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-accent-600);
+  margin-bottom: var(--space-3);
+}
+
+.text-secondary {
+  color: var(--color-text-secondary);
+}
+
+.text-inverse {
+  color: var(--color-text-inverse);
+}
+
+.text-accent {
+  color: var(--color-accent-500);
+}
+
+a.link {
+  color: var(--color-primary-500);
+  font-weight: var(--fw-medium);
+  border-bottom: 1px solid transparent;
+  transition: border-color var(--duration-fast) var(--ease-standard);
+}
+
+a.link:hover,
+a.link:focus-visible {
+  border-bottom-color: currentColor;
+}
+
+.u-prose {
+  max-width: 70ch;
+  line-height: var(--lh-body);
+  color: var(--color-text-secondary);
+}
+
+.u-prose p + p {
+  margin-top: var(--space-4);
+}
+
+strong, b {
+  font-weight: var(--fw-semibold);
+}
+
+small {
+  font-size: var(--fs-caption);
+}

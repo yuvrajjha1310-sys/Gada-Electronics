@@ -1,0 +1,116 @@
+/* ==========================================================================
+   Gada Electronics — Job Details / Apply Page
+   ========================================================================== */
+
+.job-header {
+  padding: var(--space-7);
+  background-color: var(--color-bg-alt);
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--space-8);
+}
+
+.job-header__top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-5);
+}
+
+.job-header__title {
+  font-size: var(--fs-h2);
+}
+
+.job-header__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-5);
+  margin-top: var(--space-4);
+  font-size: var(--fs-body-sm);
+  color: var(--color-text-secondary);
+}
+
+.job-header__meta-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.job-header__meta-item .icon {
+  color: var(--color-primary-500);
+}
+
+.job-details-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-9);
+}
+
+@media (min-width: 1024px) {
+  .job-details-layout {
+    grid-template-columns: 1fr 400px;
+  }
+}
+
+.job-details__section {
+  margin-bottom: var(--space-8);
+}
+
+.job-details__section-title {
+  font-size: var(--fs-h4);
+  margin-bottom: var(--space-4);
+}
+
+.job-details__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.job-details__list li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  color: var(--color-text-secondary);
+  font-size: var(--fs-body-sm);
+  line-height: var(--lh-body);
+}
+
+.job-details__list .icon {
+  color: var(--color-accent-500);
+  margin-top: 4px;
+  flex-shrink: 0;
+}
+
+/* ---------- Apply Form Card (sticky sidebar) ---------- */
+.apply-card {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  position: sticky;
+  top: calc(var(--space-8) + 64px);
+}
+
+.apply-card__title {
+  font-size: var(--fs-h5);
+  margin-bottom: var(--space-5);
+}
+
+.apply-success {
+  text-align: center;
+  padding: var(--space-8) var(--space-4);
+}
+
+.apply-success__icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: rgba(30, 142, 90, 0.12);
+  color: var(--color-success);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  margin-bottom: var(--space-5);
+}

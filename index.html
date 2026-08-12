@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gada Electronics — Powering Industries Through Innovation</title>
+  <meta name="description" content="Gada Electronics supplies industrial electrical and automation equipment, engineering services, and turnkey electrical solutions trusted across manufacturing, infrastructure, and energy sectors." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Gada Electronics — Powering Industries Through Innovation" />
+  <meta property="og:description" content="Industrial electrical equipment, automation solutions, and engineering services built for reliability at scale." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://www.gadaelectronics.com/assets/images/og/og-image.jpg" />
+  <meta property="og:url" content="https://www.gadaelectronics.com/" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="assets/images/logo/favicon.ico" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/print.css" media="print" />
+</head>
+<body data-js="home-page" data-nav-page="home" class="page-home">
+
+  <!-- Skip link (a11y) -->
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- Loading Screen -->
+  <div data-js="loading-screen" class="loading-screen">
+    <div class="loading-screen__mark">
+      <img src="assets/images/logo/logo-icon.svg" alt="" width="56" height="56" />
+    </div>
+  </div>
+
+  <!-- ============================== HEADER ============================== -->
+  <header class="site-header" data-js="header">
+    <nav class="navbar" data-js="navbar">
+      <div class="l-container navbar__inner">
+
+        <a href="index.html" class="navbar__logo" data-js="site-logo" tabindex="0">
+          <img src="assets/images/logo/logo-primary.svg" alt="Gada Electronics" class="navbar__logo-img navbar__logo-img--dark" />
+          <img src="assets/images/logo/logo-white.svg" alt="Gada Electronics" class="navbar__logo-img navbar__logo-img--light" />
+        </a>
+
+        <ul class="navbar__links" role="menubar">
+          <li role="none"><a href="index.html" data-nav-link="home" role="menuitem">Home</a></li>
+          <li role="none"><a href="about.html" data-nav-link="about" role="menuitem">About</a></li>
+
+          <li role="none" data-js="mega-menu-item" class="navbar__item--has-mega">
+            <a href="products.html" data-nav-link="products" role="menuitem"
+               data-js="mega-menu-trigger" aria-haspopup="true" aria-expanded="false" aria-controls="productsMegaMenu">
+              Products <i class="fa-solid fa-chevron-down navbar__caret"></i>
+            </a>
+            <div id="productsMegaMenu" class="mega-menu" data-js="mega-menu-panel" role="menu">
+              <div class="l-container mega-menu__inner">
+                <div class="mega-menu__columns">
+
+                  <div class="mega-menu__col">
+                    <h4 class="mega-menu__col-title">Electrical Equipment</h4>
+                    <ul class="mega-menu__list">
+                      <li><a href="products.html?category=switchgear"><i class="fa-solid fa-plug-circle-bolt"></i> Switchgear &amp; Protection</a></li>
+                      <li><a href="products.html?category=transformers"><i class="fa-solid fa-bolt"></i> Transformers</a></li>
+                      <li><a href="products.html?category=cables"><i class="fa-solid fa-diagram-project"></i> Cables &amp; Wiring</a></li>
+                      <li><a href="products.html?category=panels"><i class="fa-solid fa-server"></i> Distribution Panels</a></li>
+                    </ul>
+                  </div>
+
+                  <div class="mega-menu__col">
+                    <h4 class="mega-menu__col-title">Automation &amp; Control</h4>
+                    <ul class="mega-menu__list">
+                      <li><a href="products.html?category=plc-scada"><i class="fa-solid fa-microchip"></i> PLC &amp; SCADA Systems</a></li>
+                      <li><a href="products.html?category=drives"><i class="fa-solid fa-gauge-high"></i> Motors &amp; Drives</a></li>
+                      <li><a href="products.html?category=sensors"><i class="fa-solid fa-satellite-dish"></i> Sensors &amp; Instrumentation</a></li>
+                      <li><a href="products.html?category=control-panels"><i class="fa-solid fa-sliders"></i> Control Panels</a></li>
+                    </ul>
+                  </div>
+
+                  <div class="mega-menu__col">
+                    <h4 class="mega-menu__col-title">Safety &amp; Support</h4>
+                    <ul class="mega-menu__list">
+                      <li><a href="products.html?category=safety"><i class="fa-solid fa-helmet-safety"></i> Safety Equipment</a></li>
+                      <li><a href="products.html?category=tools"><i class="fa-solid fa-screwdriver-wrench"></i> Tools &amp; Accessories</a></li>
+                      <li><a href="products.html?category=spares"><i class="fa-solid fa-gears"></i> Spare Parts</a></li>
+                      <li><a href="products.html"><i class="fa-solid fa-grid-2"></i> View All Products</a></li>
+                    </ul>
+                  </div>
+
+                  <div class="mega-menu__promo">
+                    <img src="assets/images/products/mega-menu-promo.jpg" alt="Featured product range" loading="lazy" />
+                    <div class="mega-menu__promo-body">
+                      <span class="mega-menu__promo-eyebrow">Featured</span>
+                      <h4 class="mega-menu__promo-title">Industrial Automation Range</h4>
+                      <p class="mega-menu__promo-text">Explore our newest PLC and SCADA integration solutions.</p>
+                      <a href="products.html?category=plc-scada" class="mega-menu__promo-link">
+                        Explore Range <i class="fa-solid fa-arrow-right"></i>
+                      </a>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li role="none"><a href="industries.html" data-nav-link="industries" role="menuitem">Industries</a></li>
+          <li role="none"><a href="services.html" data-nav-link="services" role="menuitem">Services</a></li>
+          <li role="none"><a href="brands.html" data-nav-link="brands" role="menuitem">Brands</a></li>
+          <li role="none"><a href="projects.html" data-nav-link="projects" role="menuitem">Projects</a></li>
+          <li role="none"><a href="careers.html" data-nav-link="careers" role="menuitem">Careers</a></li>
+          <li role="none"><a href="contact.html" data-nav-link="contact" role="menuitem">Contact</a></li>
+        </ul>
+
+        <div class="navbar__actions">
+          <a href="contact.html" class="btn btn--primary btn--sm navbar__cta">Get a Quote</a>
+          <button type="button" class="navbar__mobile-trigger" data-js="mobile-menu-trigger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenuPanel">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Menu (off-canvas) -->
+  <div class="mobile-menu" data-js="mobile-menu-panel" id="mobileMenuPanel">
+    <div class="mobile-menu__header">
+      <a href="index.html" class="mobile-menu__logo">
+        <img src="assets/images/logo/logo-primary.svg" alt="Gada Electronics" />
+      </a>
+      <button type="button" class="mobile-menu__close" data-js="mobile-menu-close" aria-label="Close menu">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <nav class="mobile-menu__nav">
+      <ul class="mobile-menu__list">
+        <li><a href="index.html" data-nav-link="home">Home</a></li>
+        <li><a href="about.html" data-nav-link="about">About</a></li>
+
+        <li class="mobile-menu__item--has-submenu">
+          <div class="mobile-menu__item-row">
+            <a href="products.html" data-nav-link="products">Products</a>
+            <button type="button" class="mobile-menu__submenu-toggle" data-js="mobile-submenu-toggle"
+                    aria-controls="mobileProductsSubmenu" aria-expanded="false" aria-label="Toggle Products submenu">
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+          </div>
+          <ul class="mobile-menu__submenu" id="mobileProductsSubmenu">
+            <li><a href="products.html?category=switchgear">Switchgear &amp; Protection</a></li>
+            <li><a href="products.html?category=transformers">Transformers</a></li>
+            <li><a href="products.html?category=cables">Cables &amp; Wiring</a></li>
+            <li><a href="products.html?category=plc-scada">PLC &amp; SCADA Systems</a></li>
+            <li><a href="products.html?category=drives">Motors &amp; Drives</a></li>
+            <li><a href="products.html?category=safety">Safety Equipment</a></li>
+            <li><a href="products.html" class="mobile-menu__submenu-all">View All Products</a></li>
+          </ul>
+        </li>
+
+        <li><a href="industries.html" data-nav-link="industries">Industries</a></li>
+        <li><a href="services.html" data-nav-link="services">Services</a></li>
+        <li><a href="brands.html" data-nav-link="brands">Brands</a></li>
+        <li><a href="projects.html" data-nav-link="projects">Projects</a></li>
+        <li><a href="quality.html" data-nav-link="quality">Quality</a></li>
+        <li><a href="certifications.html" data-nav-link="certifications">Certifications</a></li>
+        <li><a href="careers.html" data-nav-link="careers">Careers</a></li>
+        <li><a href="contact.html" data-nav-link="contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="mobile-menu__footer">
+      <a href="contact.html" class="btn btn--primary btn--block">Get a Quote</a>
+
+      <div class="mobile-menu__contact">
+        <a href="tel:+911234567890"><i class="fa-solid fa-phone"></i> +91 12345 67890</a>
+        <a href="mailto:info@gadaelectronics.com"><i class="fa-solid fa-envelope"></i> info@gadaelectronics.com</a>
+      </div>
+
+      <div class="mobile-menu__socials">
+        <a href="#" aria-label="Gada Electronics on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#" aria-label="Gada Electronics on Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#" aria-label="Gada Electronics on YouTube"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="mobile-menu__overlay" data-js="mobile-menu-overlay"></div>
+
+  <!-- ============================== MAIN ============================== -->
+  <main id="main">
+
+    <!-- ---------- HERO ---------- -->
+    <section class="hero" id="hero">
+      <div class="hero__media">
+        <video autoplay muted loop playsinline poster="assets/images/hero/hero-bg-1.jpg">
+          <source src="assets/videos/hero-loop.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div class="hero__overlay"></div>
+
+      <div class="l-container hero__content">
+        <span class="hero__eyebrow" data-aos="fade-up">Industrial Electrical &amp; Automation Partner</span>
+        <h1 class="hero__title" data-aos="fade-up" data-aos-delay="100">
+          Powering Industries<br />Through Innovation
+        </h1>
+        <p class="hero__subtitle" data-aos="fade-up" data-aos-delay="200">
+          Gada Electronics delivers industrial-grade electrical equipment, automation systems,
+          and engineering services trusted by manufacturers, infrastructure builders, and
+          energy providers across the country — and now stocks TVs, mobile phones, ACs,
+          refrigerators, and everyday electronics for your home.
+        </p>
+        <div class="hero__actions" data-aos="fade-up" data-aos-delay="300">
+          <a href="products.html" class="btn btn--primary btn--lg">Explore Products</a>
+          <a href="contact.html" class="btn btn--outline-light btn--lg">Talk to an Expert</a>
+        </div>
+      </div>
+
+      <div class="hero__scroll-cue" data-js="hero-scroll-cta">
+        <span class="hero__scroll-cue-text">Scroll</span>
+        <span class="hero__scroll-cue-arrow"><i class="fa-solid fa-chevron-down"></i></span>
+      </div>
+    </section>
+
+    <!-- ---------- FEATURED CATEGORIES ---------- -->
+    <section class="section" id="featured-categories" data-js="featured-categories">
+      <div class="l-container">
+        <div class="section__header" data-aos="fade-up">
+          <span class="section__eyebrow">What We Offer</span>
+          <h2 class="section__title">Built Around Your Industry's Needs</h2>
+          <p class="section__subtitle">
+            From switchgear to full automation systems — everything sourced, certified, and
+            supported end-to-end.
+          </p>
+        </div>
+
+        <div class="l-grid l-grid--4" data-js="stagger-reveal">
+          <article class="card card--icon" data-js="stagger-item">
+            <div class="card__icon"><i class="fa-solid fa-bolt"></i></div>
+            <h3 class="card__title">Electrical Equipment</h3>
+            <p class="card__text">Switchgear, transformers, cabling, and protection systems built for industrial load.</p>
+            <a href="products.html" class="card__link">Browse Products <i class="fa-solid fa-arrow-right"></i></a>
+          </article>
+
+          <article class="card card--icon" data-js="stagger-item">
+            <div class="card__icon"><i class="fa-solid fa-microchip"></i></div>
+            <h3 class="card__title">Automation Systems</h3>
+            <p class="card__text">PLC, SCADA, and control panel solutions engineered for uptime and precision.</p>
+            <a href="products.html" class="card__link">Browse Products <i class="fa-solid fa-arrow-right"></i></a>
+          </article>
+
+          <article class="card card--icon" data-js="stagger-item">
+            <div class="card__icon"><i class="fa-solid fa-helmet-safety"></i></div>
+            <h3 class="card__title">Engineering Services</h3>
+            <p class="card__text">Design, installation, commissioning, and maintenance from certified engineers.</p>
+            <a href="services.html" class="card__link">View Services <i class="fa-solid fa-arrow-right"></i></a>
+          </article>
+
+          <article class="card card--icon" data-js="stagger-item">
+            <div class="card__icon"><i class="fa-solid fa-industry"></i></div>
+            <h3 class="card__title">Turnkey Projects</h3>
+            <p class="card__text">Full electrical infrastructure delivery — from planning to handover.</p>
+            <a href="projects.html" class="card__link">See Our Work <i class="fa-solid fa-arrow-right"></i></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- HOME & CONSUMER ELECTRONICS ---------- -->
+    <section class="section section--alt" id="consumer-electronics" data-js="consumer-electronics">
+      <div class="l-container">
+        <div class="section__header" data-aos="fade-up">
+          <span class="section__eyebrow">Also In Store</span>
+          <h2 class="section__title">Home &amp; Consumer Electronics</h2>
+          <p class="section__subtitle">
+            Beyond industrial gear, Gada Electronics now stocks the everyday electronics
+            your home needs — genuine products, manufacturer warranty, competitive pricing.
+          </p>
+        </div>
+
+        <div class="l-grid l-grid--3" data-js="stagger-reveal">
+          <article class="card card--icon" data-js="stagger-item">
+            <div class="card__icon"><i class="fa-solid fa-tv"></i></div>
+            <h3 class="card__title">Televisions</h3>
+            <p class="card__text">Smart, 4K, and QLED TVs from Samsung, LG, and Sony.</p>
+            <a href="products.html" class="card__link">Shop Televisions <i class="fa-solid fa-arrow-right"></i></a>
+          </article>
+
+          <article class="card card--icon" data-js="stagger-item">
+            <div class="card__icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+            <h3 class="card__title">Mobile Phones</h3>
+            <p class="card__text">Latest smartphones across every budget, with genuine warranty.</p>
+            <a href="products.html" class="card__link">Shop Mobile Phones <i class="fa-solid fa-arrow-right"></i></a>
+          </article>
+
+          <article class="card card--icon" data-js="stagger-item">
+            <div class="card__icon"><i class="fa-solid fa-wind"></i></div>
+            <h3 class="card__title">Air Conditioners</h3>
+            <p class="card__text">Inverter split and window ACs built for Indian summers.</p>
+            <a href="products.html" class="card__link">Shop Air Conditioners <i class="fa-solid fa-arrow-right"></i></a>
+          </article>
+
+          <article class="card card--icon" data-js="stagger-item">
+            <div class="card__icon"><i class="fa-solid fa-snowflake"></i></div>
+            <h3 class="card__title">Refrigerators</h3>
+            <p class="card__text">Single, double door, and side-by-side refrigerators for every kitchen.</p>
+            <a href="products.html" class="card__link">Shop Refrigerators <i class="fa-solid fa-arrow-right"></i></a>
+          </article>
+
+          <article class="card card--icon" data-js="stagger-item">
+            <div class="card__icon"><i class="fa-solid fa-blender"></i></div>
+            <h3 class="card__title">Home Appliances</h3>
+            <p class="card__text">Washing machines, microwaves, and kitchen appliances that last.</p>
+            <a href="products.html" class="card__link">Shop Home Appliances <i class="fa-solid fa-arrow-right"></i></a>
+          </article>
+
+          <article class="card card--icon" data-js="stagger-item">
+            <div class="card__icon"><i class="fa-solid fa-headphones"></i></div>
+            <h3 class="card__title">Gadgets &amp; Accessories</h3>
+            <p class="card__text">Headphones, smartwatches, and everyday tech accessories.</p>
+            <a href="products.html" class="card__link">Shop Gadgets <i class="fa-solid fa-arrow-right"></i></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- STATS BAND ---------- -->
+    <section class="stats-band" id="stats" data-js="stats-band">
+      <div class="l-container">
+        <div class="l-grid l-grid--4">
+          <div class="stat" data-aos="fade-up">
+            <span class="stat__number" data-js="counter" data-count-to="18" data-count-suffix="+">0</span>
+            <span class="stat__label">Years of Experience</span>
+          </div>
+          <div class="stat" data-aos="fade-up" data-aos-delay="100">
+            <span class="stat__number" data-js="counter" data-count-to="1200" data-count-suffix="+">0</span>
+            <span class="stat__label">Projects Delivered</span>
+          </div>
+          <div class="stat" data-aos="fade-up" data-aos-delay="200">
+            <span class="stat__number" data-js="counter" data-count-to="60" data-count-suffix="+">0</span>
+            <span class="stat__label">Brands Partnered</span>
+          </div>
+          <div class="stat" data-aos="fade-up" data-aos-delay="300">
+            <span class="stat__number" data-js="counter" data-count-to="99" data-count-suffix="%">0</span>
+            <span class="stat__label">Client Satisfaction</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- WHY SHOP WITH US ---------- -->
+    <section class="section" id="why-shop-with-us">
+      <div class="l-container">
+        <div class="section__header" data-aos="fade-up">
+          <span class="section__eyebrow">Why Choose Us</span>
+          <h2 class="section__title">Why Shop With Us?</h2>
+          <p class="section__subtitle">
+            We're committed to genuine electronics, dependable service, and a shopping
+            experience that's simple from browse to doorstep.
+          </p>
+        </div>
+
+        <div class="l-grid l-grid--3 perks-grid" data-js="stagger-reveal">
+          <article class="perk-card" data-js="stagger-item">
+            <div class="perk-card__icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <h3 class="perk-card__title">100% Authentic Products</h3>
+            <p class="perk-card__text">All our products are original and sourced from trusted brands.</p>
+          </article>
+
+          <article class="perk-card" data-js="stagger-item">
+            <div class="perk-card__icon"><i class="fa-solid fa-truck-fast"></i></div>
+            <h3 class="perk-card__title">Fast &amp; Secure Delivery</h3>
+            <p class="perk-card__text">Quick delivery across India with safe and secure packaging.</p>
+          </article>
+
+          <article class="perk-card" data-js="stagger-item">
+            <div class="perk-card__icon"><i class="fa-solid fa-award"></i></div>
+            <h3 class="perk-card__title">1 Year Warranty</h3>
+            <p class="perk-card__text">Enjoy peace of mind with official warranty on every product.</p>
+          </article>
+
+          <article class="perk-card" data-js="stagger-item">
+            <div class="perk-card__icon"><i class="fa-solid fa-headset"></i></div>
+            <h3 class="perk-card__title">Expert Customer Support</h3>
+            <p class="perk-card__text">Our support team is here to help you before and after purchase.</p>
+          </article>
+
+          <article class="perk-card" data-js="stagger-item">
+            <div class="perk-card__icon"><i class="fa-solid fa-credit-card"></i></div>
+            <h3 class="perk-card__title">Secure Payments</h3>
+            <p class="perk-card__text">Multiple secure payment options for a worry-free checkout.</p>
+          </article>
+
+          <article class="perk-card" data-js="stagger-item">
+            <div class="perk-card__icon"><i class="fa-solid fa-tags"></i></div>
+            <h3 class="perk-card__title">Best Prices Guaranteed</h3>
+            <p class="perk-card__text">Get the best deals and offers on the latest gadgets.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="why-us">
+      <div class="l-container l-grid l-grid--2col l-grid--align-center">
+        <div data-aos="fade-right">
+          <span class="section__eyebrow">Why Gada Electronics</span>
+          <h2 class="section__title">Engineering Reliability Into Every Delivery</h2>
+          <p class="section__subtitle">
+            We combine certified equipment sourcing with in-house engineering expertise —
+            so what you install today keeps performing for decades.
+          </p>
+
+          <ul class="checklist">
+            <li><i class="fa-solid fa-circle-check"></i> ISO-certified quality processes across the supply chain</li>
+            <li><i class="fa-solid fa-circle-check"></i> Direct partnerships with 60+ leading global brands</li>
+            <li><i class="fa-solid fa-circle-check"></i> In-house engineering &amp; commissioning teams</li>
+            <li><i class="fa-solid fa-circle-check"></i> Pan-India logistics with rapid turnaround</li>
+          </ul>
+
+          <a href="about.html" class="btn btn--primary">More About Us</a>
+        </div>
+
+        <div class="why-us__image" data-aos="fade-left">
+          <img src="assets/images/about/about-facility.jpg" alt="Gada Electronics engineering team at a project site" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- BRAND CAROUSEL ---------- -->
+    <section class="section section--tight brand-band" id="brands">
+      <div class="l-container">
+        <div class="section__header section__header--compact" data-aos="fade-up">
+          <span class="section__eyebrow">Trusted Partners</span>
+          <h2 class="section__title">Brands We Work With</h2>
+        </div>
+      </div>
+
+      <div class="swiper brand-carousel" data-js="brand-carousel">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="assets/images/brands/abb.png" alt="ABB logo" loading="lazy" /></div>
+          <div class="swiper-slide"><img src="assets/images/brands/siemens.png" alt="Siemens logo" loading="lazy" /></div>
+          <div class="swiper-slide"><img src="assets/images/brands/schneider-electric.png" alt="Schneider Electric logo" loading="lazy" /></div>
+          <div class="swiper-slide"><img src="assets/images/brands/havells.png" alt="Havells logo" loading="lazy" /></div>
+          <div class="swiper-slide"><img src="assets/images/brands/legrand.png" alt="Legrand logo" loading="lazy" /></div>
+          <div class="swiper-slide"><img src="assets/images/brands/eaton.png" alt="Eaton logo" loading="lazy" /></div>
+          <div class="swiper-slide"><img src="assets/images/brands/lt-electrical.png" alt="L&amp;T Electrical logo" loading="lazy" /></div>
+          <div class="swiper-slide"><img src="assets/images/brands/polycab.png" alt="Polycab logo" loading="lazy" /></div>
+        </div>
+      </div>
+
+      <div class="l-container u-text-center u-mt-40">
+        <a href="brands.html" class="btn btn--outline">View All Brands</a>
+      </div>
+    </section>
+
+    <!-- ---------- FEATURED PROJECTS ---------- -->
+    <section class="section" id="featured-projects">
+      <div class="l-container">
+        <div class="section__header" data-aos="fade-up">
+          <span class="section__eyebrow">Our Work</span>
+          <h2 class="section__title">Recent Projects</h2>
+        </div>
+
+        <div class="l-grid l-grid--3" data-js="stagger-reveal">
+          <article class="card card--project" data-js="stagger-item">
+            <a href="project-details.html" class="card__image-link">
+              <img src="assets/images/projects/project-01.jpg" alt="Industrial substation upgrade project" loading="lazy" />
+              <span class="badge badge--completed">Completed</span>
+            </a>
+            <div class="card__body">
+              <span class="card__eyebrow">Power Infrastructure</span>
+              <h3 class="card__title"><a href="project-details.html">33kV Substation Upgrade</a></h3>
+            </div>
+          </article>
+
+          <article class="card card--project" data-js="stagger-item">
+            <a href="project-details.html" class="card__image-link">
+              <img src="assets/images/projects/project-02.jpg" alt="Automated manufacturing line installation" loading="lazy" />
+              <span class="badge badge--completed">Completed</span>
+            </a>
+            <div class="card__body">
+              <span class="card__eyebrow">Automation</span>
+              <h3 class="card__title"><a href="project-details.html">Automated Production Line</a></h3>
+            </div>
+          </article>
+
+          <article class="card card--project" data-js="stagger-item">
+            <a href="project-details.html" class="card__image-link">
+              <img src="assets/images/projects/project-03.jpg" alt="Commercial building electrical fit-out" loading="lazy" />
+              <span class="badge badge--in-progress">In Progress</span>
+            </a>
+            <div class="card__body">
+              <span class="card__eyebrow">Commercial</span>
+              <h3 class="card__title"><a href="project-details.html">Corporate Campus Electrical Fit-Out</a></h3>
+            </div>
+          </article>
+        </div>
+
+        <div class="u-text-center u-mt-40">
+          <a href="projects.html" class="btn btn--primary">View All Projects</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- TESTIMONIALS ---------- -->
+    <section class="section section--dark" id="testimonials">
+      <div class="l-container">
+        <div class="section__header" data-aos="fade-up">
+          <span class="section__eyebrow">Client Voices</span>
+          <h2 class="section__title">What Our Partners Say</h2>
+        </div>
+
+        <div class="swiper testimonial-slider" data-js="testimonial-slider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide testimonial">
+              <p class="testimonial__quote">
+                "Gada Electronics delivered our substation upgrade on schedule with zero
+                safety incidents. Their engineering team caught issues ours hadn't even flagged."
+              </p>
+              <div class="testimonial__author">
+                <img src="assets/images/team/client-01.jpg" alt="" loading="lazy" />
+                <div>
+                  <span class="testimonial__name">Rajesh Mehta</span>
+                  <span class="testimonial__role">Plant Head, Precision Manufacturing Ltd.</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide testimonial">
+              <p class="testimonial__quote">
+                "Responsive, technically sharp, and genuinely invested in getting the
+                automation design right. We've since made them our go-to supplier."
+              </p>
+              <div class="testimonial__author">
+                <img src="assets/images/team/client-02.jpg" alt="" loading="lazy" />
+                <div>
+                  <span class="testimonial__name">Anjali Rao</span>
+                  <span class="testimonial__role">Operations Director, Vertex Infra</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide testimonial">
+              <p class="testimonial__quote">
+                "From sourcing to commissioning, everything was handled with a level of
+                precision we hadn't seen from previous vendors."
+              </p>
+              <div class="testimonial__author">
+                <img src="assets/images/team/client-03.jpg" alt="" loading="lazy" />
+                <div>
+                  <span class="testimonial__name">Suresh Iyer</span>
+                  <span class="testimonial__role">Project Manager, Coastal Energy Corp.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- CTA BAND ---------- -->
+    <section class="cta-band" id="cta">
+      <div class="l-container cta-band__inner" data-aos="fade-up">
+        <h2 class="cta-band__title">Ready to Discuss Your Project?</h2>
+        <p class="cta-band__text">Our engineering team responds within one business day.</p>
+        <a href="contact.html" class="btn btn--accent btn--lg">Get in Touch</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================== FOOTER ============================== -->
+  <footer class="site-footer">
+    <div class="l-container">
+      <div class="site-footer__top">
+        <div class="footer-brand">
+          <img src="assets/images/logo/logo-white.svg" alt="Gada Electronics logo" class="footer-brand__logo" width="140" height="38">
+          <p class="footer-brand__text">Gada Electronics delivers premium electrical and electronic equipment, engineering solutions, and industrial installations across India — powering industries through innovation for over 28 years.</p>
+          <div class="footer-brand__social">
+            <a href="https://facebook.com/gadaelectronics" aria-label="Facebook" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://linkedin.com/company/gadaelectronics" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://twitter.com/gadaelectronics" aria-label="Twitter" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://instagram.com/gadaelectronics" aria-label="Instagram" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://youtube.com/@gadaelectronics" aria-label="YouTube" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Quick Links</p>
+          <ul class="footer-col__list">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="products.html">Our Products</a></li>
+            <li><a href="index.html#consumer-electronics">Consumer Electronics</a></li>
+            <li><a href="industries.html">Industries We Serve</a></li>
+            <li><a href="services.html">Services &amp; Solutions</a></li>
+            <li><a href="projects.html">Projects &amp; Installations</a></li>
+            <li><a href="quality.html">Quality Assurance</a></li>
+            <li><a href="certifications.html">Certifications</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Company</p>
+          <ul class="footer-col__list">
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="contact.html#faq">FAQs</a></li>
+            <li><a href="assets/docs/company-profile.pdf" target="_blank" rel="noopener">Company Profile (PDF)</a></li>
+            <li><a href="404.html">Privacy Policy</a></li>
+            <li><a href="404.html">Terms of Service</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Get In Touch</p>
+          <div class="footer-contact__item"><i class="fa-solid fa-location-dot icon"></i><span>Plot 45, MIDC Industrial Area, Andheri East, Mumbai, Maharashtra 400093, India</span></div>
+          <div class="footer-contact__item"><i class="fa-solid fa-phone icon"></i><span>+91-22-4000-1234</span></div>
+          <div class="footer-contact__item"><i class="fa-solid fa-envelope icon"></i><span>info@gadaelectronics.com</span></div>
+          <div class="footer-newsletter">
+            <p class="footer-col__title" style="margin-bottom: var(--space-2); font-size: var(--fs-body-sm);">Subscribe to our newsletter</p>
+            <form class="footer-newsletter__form" data-js="newsletter-form" novalidate>
+              <label for="newsletterEmail" class="u-sr-only">Email address</label>
+              <input type="email" id="newsletterEmail" name="email" class="footer-newsletter__input" placeholder="Enter your email" required aria-describedby="newsletterMessage">
+              <button type="submit" class="btn btn--primary btn--icon" aria-label="Subscribe"><i class="fa-solid fa-paper-plane"></i></button>
+            </form>
+            <p id="newsletterMessage" class="form-hint u-sr-only" role="status" aria-live="polite"></p>
+            <input type="text" name="hp_field" class="u-sr-only" tabindex="-1" autocomplete="off">
+          </div>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <p class="site-footer__copyright">&copy; <span data-js="current-year">2026</span> Gada Electronics. All rights reserved.</p>
+        <div class="site-footer__bottom-links">
+          <a href="404.html">Privacy Policy</a>
+          <a href="404.html">Terms &amp; Conditions</a>
+          <a href="404.html">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button type="button" class="back-to-top" data-js="back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- ============================== SCRIPTS ============================== -->
+  <!-- Vendor -->
+  <script src="js/vendor/aos.js"></script>
+  <script src="js/vendor/swiper-bundle.min.js"></script>
+  <script src="js/vendor/gsap.min.js"></script>
+  <!--
+    ScrollTrigger ships as a separate GSAP plugin file in production;
+    add js/vendor/ScrollTrigger.min.js here if scroll-effects.js needs it,
+    otherwise it will just no-op.
+  -->
+  <script src="js/vendor/lightbox.min.js"></script>
+
+  <!-- App (ES Modules) -->
+  <script type="module" src="js/main.js"></script>
+  <script type="module" src="js/pages/home.js"></script>
+</body>
+</html>
